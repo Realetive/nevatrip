@@ -1,0 +1,89 @@
+<table width="100%" cellpadding="0" cellspacing="0" style="font-family:Arial,sans-serif">
+    <tbody>
+    <tr>
+        <td align="center" valign="top">
+
+            <h3>Заявка на бронирование билетов</h3>
+
+            <table width="622" cellpadding="5" cellspacing="5" style="border:1px solid #dadada;">
+                <tbody>
+                <tr>
+                    <th width="200" style="text-align: right;">№ Договора:</th>
+                    <td>[[#[[+trip_id]].tv.e_operator_contract]]</td>
+                </tr>
+                <tr>
+                    <th style="text-align: right;">Название компании:</th>
+                    <td>Про Событие</td>
+                </tr>
+                <tr>
+                    <th style="text-align: right;">Контактное лицо:</th>
+                    <td>Дука Мария</td>
+                </tr>
+                <tr>
+                    <th style="text-align: right;">Контактный телефон:</th>
+                    <td>89112429764</td>
+                </tr>
+                <tr>
+                    <th style="text-align: right;">Контактный E-mail:</th>
+                    <td>prosobitie@ya.ru</td>
+                </tr>
+                </tbody>
+            </table>
+
+
+            <h3>Просим Вас забронировать билеты на прогулку:</h3>
+
+            <table width="622" cellpadding="5" cellspacing="5" style="border:1px solid #dadada;">
+                <tbody>
+                <tr>
+                    <th width="200" style="text-align: right;">Дата:</th>
+                    <td>[[+trip_date]]</td>
+                </tr>
+                <tr>
+                    <th style="text-align: right;">Время:</th>
+                    <td>[[+trip_time:isnot=``:then=`[[+trip_time]]`]]</td>
+                </tr>
+                <tr>
+                    <th style="text-align: right;">Название рейса:</th>
+                    <td>[[#[[+trip_id]].pagetitle]]</td>
+                </tr>
+                <tr>
+                    <th style="text-align: right;">№ Ваучера:</th>
+                    <td>[[+code]]</td>
+                </tr>
+                <tr>
+                    <th style="text-align: right;">ФИО Клиента:</th>
+                    <td>[[+fullname]]</td>
+                </tr>
+                <tr>
+                    <th style="text-align: right;">Количество туристов:</th>
+                    <td>[[+total_tickets_c]]</td>
+                </tr>
+                </tbody>
+            </table>
+
+
+            <h3>Из них:</h3>
+
+            <table width="622" cellpadding="5" cellspacing="5" style="border:1px solid #dadada;">
+                <tbody>
+                <tr>
+                    <td width="50%" valign="top">
+                        [[+ticket_1_adult_c:gt=`0`:then=`<b>Взрослые</b>: [[+ticket_1_adult_c]]<br/>`]]
+                        [[+ticket_2_adult_c:gt=`0`:then=`<b>Взрослые, на 2 дня</b>: [[+ticket_2_adult_c]]<br/>`]]
+                        [[+ticket_1_discount_c:gt=`0`:then=`<b>Льготные</b>: [[+ticket_1_discount_c]]<br/>`]]
+                        [[+ticket_2_discount_c:gt=`0`:then=`<b>Льготные, на 2 дня</b>: [[+ticket_2_discount_c]]<br/>`]]
+                    </td>
+                    <td valign="top">
+                        [[+ticket_1_child_c:gt=`0`:then=`<b>Дети до 12 лет</b>: [[+ticket_1_child_c]]<br/>`]]
+                        [[+ticket_2_child_c:gt=`0`:then=`<b>Дети до 12 лет, на 2 дня</b>: [[+ticket_2_child_c]]<br/>`]]
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+
+        </td>
+    </tr>
+    </tbody>
+</table>
