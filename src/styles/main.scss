@@ -172,6 +172,8 @@ $img-bg-url:                     '../img/bg.jpg';
  * Custom styles
  */
 
+@import "components/topbar";
+
 .footer{
   padding: (@footer-padding * 3) 0;
 }

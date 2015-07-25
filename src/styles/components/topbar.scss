@@ -1,0 +1,34 @@
+/*!
+ * Topbars
+ *
+ * Wrapper and base class
+ * Provide a static topbar from which we expand to create full-width, fixed, and
+ * other topbar variations.
+ */
+
+.topbar {
+  position: relative;
+  height: $topbar-height; // Ensure a topbar always shows (e.g., without a .topbar-brand in collapsed mode)
+  background-color: $topbar-bg;
+  overflow: hidden;
+
+  // Prevent floats from breaking the topbar
+  @extend .clearfix;
+}
+
+// Brand/project name
+
+.topbar-brand, .topbar-slogan {
+  float: left;
+  padding: $topbar-padding-vertical $topbar-padding-horizontal;
+  font-size: $font-size-large;
+  color: $topbar-brand-color;
+}
+
+.topbar-slogan{
+  padding-top: ($topbar-padding-vertical * 1.6);
+}
+
+.topbar-text{
+  padding: $topbar-padding-vertical $topbar-padding-horizontal;
+}

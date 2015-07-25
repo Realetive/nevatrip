@@ -1,39 +1,80 @@
 <!doctype html>
 <html lang="<!-- @echo config.htmlLanguage -->" itemscope itemtype="http://schema.org/LocalBusiness">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="<!-- @echo description -->">
-    <title><!-- @echo config.projectTitle --></title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<!-- @echo description -->">
+  <title><!-- @echo config.projectTitle --></title>
 
-    <!-- @include ./components/_head/meta.google.html -->
-    <!-- @include ./components/_head/meta.open-graph.html -->
+  <!-- @include ./components/_head/meta.google.html -->
+  <!-- @include ./components/_head/meta.open-graph.html -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css" />
-    <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" />
-    <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery.css" />
-    <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
-    <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css" />
+  <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" />
+  <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery.css" />
+  <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
+  <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
 
-    <!-- @include ./components/_head/favicons.html -->
+  <!-- @include ./components/_head/favicons.html -->
 
-  </head>
-  <body>
+</head>
+<body data-spy="scroll" data-target="#NavScrollSpy">
     <!--[if lt IE 10]>
       <!-- @include ./components/browserupgrade.html -->
     <![endif]-->
     <noscript>
       <!-- @include ./components/noscript.html -->
     </noscript>
-    
+
+    <div class="topbar" id="TopBar">
+      <div class="container">
+        <h1 class="topbar-brand" style="margin: 0;">
+          <!-- Водные экскурсии по рекам и каналам Петербурга, прогулки по Неве на теплоходе NevaTrip -->
+          <a href="/">
+            <img src="/assets/img/nevatrip_logo_h.png" srcset="/assets/img/nevatrip_logo_h_x2.png 2x" alt="Nevatrip" itemprop="logo"/>
+          </a>
+        </h1>
+        <div class="topbar-slogan hidden-xs">Лучшие водные экскурсии по Петербургу</div>
+        <div class="topbar-text text-right">
+          <a href="mailto:info@nevatrip.ru" target="_blank">info@nevatrip.ru</a>
+
+          <p class="lead"><a href="tel:88129653404">8 812 965-34-04</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-inverse" id="NavScrollSpy" data-spy="affix" data-offset-top="120">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+            <span class="sr-only">Меню</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="nav navbar-nav nav-justified">
+            <li><a href="#day"><span class="lead">Дневные экскурсии</span><span class="hidden-xs"><br/>по рекам и каналам Петербурга</span></a>
+            </li>
+            <li><a href="#night"><span class="lead">Ночные прогулки</span><span class="hidden-xs"><br/>под развод мостов</span></a>
+            </li>
+            <li><a href="#meteors"><span class="lead">Метеор</span><span class="hidden-xs"><br/>в Петергоф и пригороды</span></a>
+            </li>
+            <li><a href="#arenda"><span class="lead">Аренда теплохода</span><span class="hidden-xs"><br/>на свадьбу, корпоратив</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -68,4 +109,4 @@
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>
-</html>
+  </html>
