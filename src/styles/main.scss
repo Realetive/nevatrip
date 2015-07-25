@@ -43,19 +43,22 @@ $border-radius-small:            2px;
 
 $btn-warning-color:              $gray-base;
 
+$btn-border-radius-large:        30px;
+
 $grid-gutter-width:              30px;
 
 $container-large-desktop:        (940px + $grid-gutter-width);
 
 $navbar-height:                  36px;
 $navbar-margin-bottom:           0;
+$navbar-border-radius:           0;
 $navbar-inverse-bg:              lighten($gray-base, 2%);
 $navbar-inverse-border:          #d6d2cf;
 $navbar-inverse-link-hover-bg:   #2c6590;
 $navbar-inverse-link-active-bg:  #2c6590;
 
 $topbar-height:                  65px;
-$topbar-margin-bottom:           0;
+$topbar-margin-bottom:           68px;
 $topbar-border-radius:           $border-radius-base;
 $topbar-padding-horizontal:      15px;
 $topbar-padding-vertical:        12px;
@@ -174,6 +177,26 @@ $img-bg-url:                     '../img/bg.jpg';
 @import "bower_components/font-awesome/scss/icons";
 
 // endbower
+
+/*!
+ * Rewrite Twitter Bootstrap
+ */
+
+.navbar {
+  border-width: 0;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
+
+  &.affix {
+    position: fixed;
+  }
+}
+
+.navbar-nav.nav-justified > li {
+  float: none;
+}
 
 /*!
  * Custom styles
