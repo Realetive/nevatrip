@@ -6,3 +6,4 @@ bower_components
 test
 src/*.html
 src/images/favicons
+src/_templates/components/_head/favicons.html
