@@ -13,7 +13,7 @@
   overflow: hidden;
 
   // Prevent floats from breaking the topbar
-  @extend .clearfix;
+  @include clearfix();
 }
 
 // Brand/project name
