@@ -29,7 +29,7 @@ gulp.task( 'styles', [ 'templates' ], () => {
       includePaths: [ '.' ]
     } ).on( 'error', $.sass.logError) )
     .pipe( $.autoprefixer( { browsers: [ 'last 3 version' ] } ) )
-    .pipe( $.sourcemaps.write() )
+    .pipe( $.sourcemaps.write( './' ) )
     .pipe( gulp.dest( '.tmp/styles' ) )
     .pipe(reload( { stream: true } ) );
 });
