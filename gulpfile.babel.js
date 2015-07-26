@@ -158,7 +158,6 @@ gulp.task( 'serve', [ 'styles', 'fonts' ], () => {
     port: 9000,
     server: {
       baseDir: [ '.tmp', 'src' ],
-      middleware: [compress()],
       routes: {
         '/bower_components': 'bower_components'
       }
