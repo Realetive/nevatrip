@@ -11,6 +11,7 @@
   height: $topbar-height; // Ensure a topbar always shows (e.g., without a .topbar-brand in collapsed mode)
   background-color: $topbar-bg;
   overflow: hidden;
+  margin-bottom: $topbar-margin-bottom;
 
   // Prevent floats from breaking the topbar
   @include clearfix();
@@ -18,7 +19,8 @@
 
 // Brand/project name
 
-.topbar-brand, .topbar-slogan {
+.topbar-brand,
+.topbar-slogan {
   float: left;
   padding: $topbar-padding-vertical $topbar-padding-horizontal;
   font-size: $font-size-large;
@@ -31,4 +33,9 @@
 
 .topbar-text{
   padding: $topbar-padding-vertical $topbar-padding-horizontal;
+}
+
+.topbar__phone {
+  display: block;
+  @extend .lead;
 }

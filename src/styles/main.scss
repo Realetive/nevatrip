@@ -56,9 +56,10 @@ $navbar-inverse-bg:              lighten($gray-base, 2%);
 $navbar-inverse-border:          #d6d2cf;
 $navbar-inverse-link-hover-bg:   #2c6590;
 $navbar-inverse-link-active-bg:  #2c6590;
+$navbar-padding-horizontal:      0;
 
 $topbar-height:                  65px;
-$topbar-margin-bottom:           68px;
+$topbar-margin-bottom:           53px;
 $topbar-border-radius:           $border-radius-base;
 $topbar-padding-horizontal:      15px;
 $topbar-padding-vertical:        12px;
@@ -113,7 +114,7 @@ $img-bg-url:                     '../img/bg.jpg';
 
 // Reset and dependencies
 @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/print";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/print";
 // @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
 
 // Core CSS
@@ -121,7 +122,7 @@ $img-bg-url:                     '../img/bg.jpg';
 @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/type";
 // @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/code";
 @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/grid";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables";
 @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/forms";
 @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
 
@@ -182,6 +183,15 @@ $img-bg-url:                     '../img/bg.jpg';
  * Rewrite Twitter Bootstrap
  */
 
+.lead {
+  font-size: floor(($font-size-base * 1.1));
+  line-height: 1.2;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: ($font-size-base * 1.2);
+  }
+}
+
 .navbar {
   border-width: 0;
   position: absolute;
@@ -196,6 +206,26 @@ $img-bg-url:                     '../img/bg.jpg';
 
 .navbar-nav.nav-justified > li {
   float: none;
+
+  @media (min-width: 768px) {
+    &:before {
+      content: '';
+      background: #e7e7e7;
+      width: 1px;
+      height: 70%;
+      position: absolute;
+      top: 15%;
+      left: 0;
+    }
+
+    &:first-child:before {
+      display: none;
+    }
+  }
+
+  & > a {
+    padding: 5px 10px;
+  }
 }
 
 /*!
@@ -207,10 +237,7 @@ $img-bg-url:                     '../img/bg.jpg';
 .footer{
   padding: ($footer-padding * 3) 0;
 }
-.img-bg{
-  background: url($img-bg-url) no-repeat 50% 50%;
-  background-size: cover;
-}
+
 .navbar.affix{
   top: 0;
   z-index: 1000;
@@ -301,10 +328,10 @@ hr.short {
   padding-top: 8px;
   float: left;
 
-  .jumbotron {
-    font-size: 48px;
-    padding-top: 4px;
-  }
+}
+.jumbotron .price {
+  font-size: 48px;
+  padding-top: 4px;
 }
 
 .sub-price {
@@ -319,6 +346,8 @@ hr.short {
 }
 
 .img-bg {
+  background: url($img-bg-url) no-repeat 50% 50%;
+  background-size: cover;
   padding: 40px 0 50px 0;
   margin-bottom: 50px;
   background-size: cover;
@@ -326,11 +355,32 @@ hr.short {
   background-position: 50% 50%;
 
   @media (min-width: $screen-sm-min) {
-    padding: 80px 0 100px 0;
+    padding: 80px 0 100px;
+
+    // &.jumbotron {
+    //   padding: 48px 0;
+    // }
   }
 
   .alpha-bg {
     display: inline-block;
+  }
+}
+
+.img-bg__title {
+  font-size: 35px;
+  color: rgb(49, 45, 45);
+  font-weight: 500;
+  line-height: 38.5px;
+  margin-bottom: 25.2px;
+  margin-top: 21px;
+}
+
+.img-bg__feature-item {
+  margin-bottom: 10px;
+
+  .lead {
+    font-size: 21px;
   }
 }
 
