@@ -3,6 +3,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+import compress from 'compression';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -157,6 +158,7 @@ gulp.task( 'serve', [ 'styles', 'fonts' ], () => {
     port: 9000,
     server: {
       baseDir: [ '.tmp', 'src' ],
+      middleware: [compress()],
       routes: {
         '/bower_components': 'bower_components'
       }
@@ -181,7 +183,8 @@ gulp.task( 'serve:dist', () => {
     notify : false,
     port   : 9000,
     server : {
-      baseDir : [ 'dist' ]
+      baseDir : [ 'dist' ],
+      middleware: [compress()]
     }
   });
 });
