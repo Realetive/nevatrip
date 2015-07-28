@@ -13,6 +13,10 @@
   overflow: hidden;
   margin-bottom: $topbar-margin-bottom;
 
+  @media (min-width: $screen-sm-min) {
+    margin-bottom: $topbar-margin-bottom-sm;    
+  }
+
   // Prevent floats from breaking the topbar
   @include clearfix();
 }

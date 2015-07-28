@@ -59,7 +59,8 @@ $navbar-inverse-link-active-bg:  #2c6590;
 $navbar-padding-horizontal:      0;
 
 $topbar-height:                  65px;
-$topbar-margin-bottom:           53px;
+$topbar-margin-bottom:           36px;
+$topbar-margin-bottom-sm:        53px;
 $topbar-border-radius:           $border-radius-base;
 $topbar-padding-horizontal:      15px;
 $topbar-padding-vertical:        12px;
@@ -198,6 +199,7 @@ $img-bg-url:                     '../img/bg.jpg';
   top: 65px;
   left: 0;
   right: 0;
+  z-index: 1;
 
   &.affix {
     position: fixed;
@@ -255,16 +257,20 @@ $img-bg-url:                     '../img/bg.jpg';
 .fa-ul{
   margin-left: 22px;
   margin-bottom: 20px;
+
   .fa-stack{
     margin-left: -40px;
   }
+
   .lead{
     margin-left: -6px;
   }
 }
-.fa-li{
-  top: .30em
-}
+
+// .fa-li{
+//   top: .30em
+// }
+
 .fa-stack{
   vertical-align: text-bottom;
 }
@@ -313,12 +319,6 @@ div.divider {
   border-color: rgb(232, 183, 5);
 }
 
-hr.short {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .price {
   font-size: 36px;
   font-weight: bold;
@@ -356,10 +356,6 @@ hr.short {
 
   @media (min-width: $screen-sm-min) {
     padding: 80px 0 100px;
-
-    // &.jumbotron {
-    //   padding: 48px 0;
-    // }
   }
 
   .alpha-bg {
@@ -442,3 +438,20 @@ hr.short {
 .gallery-item {
   margin-bottom: 20px;
 }
+
+.trip {
+  padding-bottom: 21px;
+  margin-bottom: 21px;
+  position: relative;
+
+  &::after {
+    display: block;
+    background-color: #edeceb;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+    height: .06em;
+  }
+}
+
