@@ -8,6 +8,21 @@ import compress from 'compression';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 const packageJson = require( './package.json' );
+const testLintOptions = {
+  env: {
+    mocha: true
+  }
+};
+
+function lint( files, options ) {
+  return () => {
+    return gulp.src( files )
+      .pipe( reload( { stream: true, once: true } ) )
+      .pipe( $.eslint( options ) )
+      .pipe( $.eslint.format() )
+      .pipe( $.if( !browserSync.active, $.eslint.failAfterError() ) );
+  };
+}
 
 /*!
  * Gulp plugin to preprocess HTML, JavaScript, and other files based
@@ -34,21 +49,6 @@ gulp.task( 'styles', [ 'templates' ], () => {
     .pipe( gulp.dest( '.tmp/styles' ) )
     .pipe(reload( { stream: true } ) );
 });
-
-function lint( files, options ) {
-  return () => {
-    return gulp.src( files )
-      .pipe( reload( { stream: true, once: true } ) )
-      .pipe( $.eslint( options ) )
-      .pipe( $.eslint.format() )
-      .pipe( $.if( !browserSync.active, $.eslint.failAfterError() ) );
-  };
-}
-const testLintOptions = {
-  env: {
-    mocha: true
-  }
-};
 
 gulp.task( 'lint', lint( 'src/scripts/**/*.js' ) );
 gulp.task( 'lint:test', lint( 'test/spec/**/*.js', testLintOptions ) );
@@ -222,7 +222,8 @@ gulp.task( 'wiredep', () => {
 });
 
 gulp.task( 'build', [ 'lint', 'html', 'images', 'favicons', 'fonts', 'extras' ], () => {
-  return gulp.src( 'dist/**/*' ).pipe( $.size( { title: 'build', gzip: true } ) );
+  return gulp.src( 'dist/**/*' )
+    .pipe( $.size( { title: 'build', gzip: true } ) );
 });
 
 gulp.task( 'default', [ 'clean' ], () => {
