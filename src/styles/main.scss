@@ -173,7 +173,7 @@ $img-bg-url:                     '../img/bg.jpg';
 @import "bower_components/font-awesome/scss/fixed-width";
 @import "bower_components/font-awesome/scss/list";
 @import "bower_components/font-awesome/scss/bordered-pulled";
-@import "bower_components/font-awesome/scss/animated";
+// @import "bower_components/font-awesome/scss/animated";
 @import "bower_components/font-awesome/scss/rotated-flipped";
 @import "bower_components/font-awesome/scss/stacked";
 @import "bower_components/font-awesome/scss/icons";
@@ -248,10 +248,6 @@ $img-bg-url:                     '../img/bg.jpg';
   .navbar-nav > li > a {
     min-height: $navbar-height;
   }
-
-  .hidden-xs{
-    display: none;
-  }
 }
 
 .fa-ul{
@@ -267,13 +263,10 @@ $img-bg-url:                     '../img/bg.jpg';
   }
 }
 
-// .fa-li{
-//   top: .30em
-// }
-
 .fa-stack{
   vertical-align: text-bottom;
 }
+
 .fa-xs{
   font-size: 0.8em;
 }
@@ -317,28 +310,6 @@ div.divider {
 .btn-warning:hover {
   background-color: rgb(232, 183, 5);
   border-color: rgb(232, 183, 5);
-}
-
-.price {
-  font-size: 36px;
-  font-weight: bold;
-  vertical-align: middle;
-  line-height: 1;
-  display: block;
-  padding-top: 8px;
-  float: left;
-
-}
-.jumbotron .price {
-  font-size: 48px;
-  padding-top: 4px;
-}
-
-.sub-price {
-  font-size: 14px;
-  line-height: 1;
-  display: block;
-  clear: both;
 }
 
 .img-item {
@@ -440,18 +411,64 @@ div.divider {
 }
 
 .trip {
-  padding-bottom: 21px;
-  margin-bottom: 21px;
-  position: relative;
+  margin-bottom: 30px;
 
-  &::after {
+  &:after {
     display: block;
     background-color: #edeceb;
-    position: absolute;
-    bottom: 0;
-    left: 25%;
-    right: 25%;
-    height: .06em;
+    height: .08em;
+    margin: 0 25% 20px;
+    position: relative;
+    top: 15px;
   }
 }
 
+.trip__action {
+  @include clearfix();
+  margin: 20px 0;
+}
+
+.trip__price {
+  float: left;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1;
+  padding-top: 8px;
+  vertical-align: middle;
+}
+
+.trip__price_lg {
+  font-size: 43px;
+  margin-right: 15px;
+}
+
+.trip__price_sm {
+  font-size: 14px;
+  line-height: 1;
+  display: block;
+  clear: both;
+}
+
+.trip__btn {
+  @extend .btn;
+  @extend .btn-warning;
+  @extend .btn-lg;
+  float: left;
+  padding: 10px 15px;
+  margin-left: 15px;
+
+  @media (min-width: $screen-sm-min) {
+    padding: 10px 25px;
+    margin-left: 20px;
+  } 
+}
+
+.trip__info {
+  @extend .btn;
+  @extend .btn-link;
+  @extend .btn-lg;
+  white-space: normal;
+
+  @media (min-width: $screen-sm-min) {
+  } 
+}
