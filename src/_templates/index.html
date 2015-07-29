@@ -6,6 +6,8 @@
   <meta name="description" content="<!-- @echo description -->">
   <title><!-- @echo config.projectTitle --></title>
 
+  <base href="/">
+
   <!-- @include ./components/_head/meta.google.html -->
   <!-- @include ./components/_head/meta.open-graph.html -->
 
@@ -36,7 +38,7 @@
 
     <div class="topbar" id="TopBar">
       <div class="container">
-        <h1 class="topbar-brand" style="margin: 0;">
+        <h1 class="topbar-brand">
           <a href="/">
             <img src="<!-- @echo homepage -->assets/img/nevatrip_logo_h.png" srcset="<!-- @echo homepage -->assets/img/nevatrip_logo_h_x2.png 2x" alt="Nevatrip" itemprop="logo">
           </a>
@@ -127,15 +129,11 @@
                   <span class="lead">Длительность 1,5 часа</span>
                 </li>
               </ul>
-              <div class="pull-left">
-                <span class="price">790 <i class="fa fa-rub fa-xs"></i></span>
-                &nbsp;
-                &nbsp;
-                <a href="order.html" class="btn btn-warning btn-lg">Купить</a>
+              <div class="trip__action">
+                <span class="trip__price trip__price_lg">790 <i class="fa fa-rub fa-xs"></i></span>
+                <a href="order.html" class="trip__btn">Купить</a>
+                <a href="trip.html" class="trip__info">Подробнее об экскурсии &rarr;</a>
               </div>
-              <p style="float:left;margin-left: 20px;margin-top:10px;">
-                <a href="trip.html">Подробнее об экскурсии &rarr;</a>
-              </p>
             </div>
           </div>
         </div>
@@ -144,20 +142,20 @@
 
     <div class="container">
       <div class="row lead text-center">
-        <div class="col-sm-6 col-md-3">
-          <p class="text-center text-primary"><i class="fa fa-money fa-2x"></i></p>
+        <div class="col-sm-3">
+          <p><i class="text-primary fa fa-money fa-2x"></i></p>
           <p>Самые выгодные цены</p>
         </div>
-        <div class="col-sm-6 col-md-3">
-          <p class="text-center text-primary"><i class="fa fa-credit-card fa-2x"></i></p>
+        <div class="col-sm-3">
+          <p><i class="text-primary fa fa-credit-card fa-2x"></i></p>
           <p>Покупка в 2 клика</p>
         </div>
-        <div class="col-sm-6 col-md-3">
-          <p class="text-center text-primary"><i class="fa fa-ticket fa-2x"></i></p>
+        <div class="col-sm-3">
+          <p><i class="text-primary fa fa-ticket fa-2x"></i></p>
           <p>Электронный билет с открытым временем</p>
         </div>
-        <div class="col-sm-6 col-md-3">
-          <p class="text-center text-primary"><i class="fa fa-star fa-2x"></i></p>
+        <div class="col-sm-3">
+          <p><i class="text-primary fa fa-star fa-2x"></i></p>
           <p>Лучшие маршруты от теплоходных компаний</p>
         </div>
       </div>
@@ -181,689 +179,638 @@
           <div class="col-sm-6">
             <a href="trip.html" class="h3"><h3>День ВМФ 2015 - экскурсия на теплоходе</h3></a>
             <ul class="fa-ul">
-             <li>
-              <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Все военные корабли в акватории</span>
-            </li>
-            <li>
-              <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Специальная программа экскурсовода</span>
-            </li>
-            <li>
-              <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Комфортабельный двухпалубный теплоход</span>
-            </li>
-            <li>
-              <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Отправление каждые 1,5 часа</span>
-            </li>
-          </ul>
-          <div class="clearfix" style="margin-bottom: 14px;">
-            <div class="pull-left">
-              <span class="price">500 <i class="fa fa-rub fa-xs"></i></span>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Все военные корабли в акватории</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Специальная программа экскурсовода</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Комфортабельный двухпалубный теплоход</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Отправление каждые 1,5 часа</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                500 <i class="fa fa-rub fa-xs"></i>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
             </div>
-            &nbsp;
-            &nbsp;
-            <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
+          </div>
+        </div>
+
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/day/finski-zaliv.jpg" srcset="<!-- @echo homepage -->assets/img/e/day/finski-zaliv_x2.jpg 2x" alt="Прогулка по Неве с выходом в Финский&nbsp;залив" class="img-responsive h3 img-rounded img-item">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="trip.html" class="h3"><h3>Прогулка по Неве с выходом в Финский&nbsp;залив</h3></a>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Все основные достопримечательности за 1,5 часа</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Комфортабельный двухпалубный теплоход-ресторан</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Просторы Финского залива</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Отправление каждые 2 часа с 12 до 18</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                530 <i class="fa fa-rub fa-xs"></i>
+                <small class="trip__price_sm">600 <i class="fa fa-rub fa-xs"></i> на причале</small>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/day/hop-on-hop-off.jpg" srcset="<!-- @echo homepage -->assets/img/e/day/hop-on-hop-off_x2.jpg 2x" alt="Обзорная экскурсия по рекам и каналам с остановками Hop on Hop Off" class="img-responsive h3 img-rounded img-item">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="trip.html" class="h3"><h3>Обзорная экскурсия по рекам и каналам с остановками Hop on Hop Off</h3></a>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">6 остановок у главных достопримечательностей</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Неограниченное число катаний</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Билет на 1 или 2 дня</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Идеальный способ изучить город за день</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                690 <i class="fa fa-rub fa-xs"></i>
+                <small class="trip__price_sm">800 <i class="fa fa-rub fa-xs"></i> на причале</small>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/day/severnie-ostrova.jpg" srcset="<!-- @echo homepage -->assets/img/e/day/severnie-ostrova_x2.jpg 2x" alt="Забытые острова с выходом в Финский залив" class="img-responsive h3 img-rounded img-item">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="trip.html" class="h3"><h3>Забытые острова с выходом в Финский залив</h3></a>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Исторический центр и островной парковый ансамбль</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Двухпалубный теплоход с открытой второй палубой</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Самая продолжительная водная экскурсия: 2 часа</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Билет действует целый день</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                650 <i class="fa fa-rub fa-xs"></i>
+                <small class="trip__price_sm">700 <i class="fa fa-rub fa-xs"></i> на причале</small>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/day/po-rekam-i-kanalam.jpg" srcset="<!-- @echo homepage -->assets/img/e/day/po-rekam-i-kanalam_x2.jpg 2x" alt="Реки и каналы центрального Петербурга" class="img-responsive h3 img-rounded img-item">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="trip.html" class="h3"><h3>Реки и каналы центрального Петербурга</h3></a>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">15 мостов, 4 реки и канала</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Отправление каждые 30 минут, билет на день</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Атмосфера «Северной Венеции»</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Теплоход с панорамным остеклением и открытой палубой</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                490 <i class="fa fa-rub fa-xs"></i>
+                <small class="trip__price_sm">600 <i class="fa fa-rub fa-xs"></i> на причале</small>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/day/jazz.jpg" srcset="<!-- @echo homepage -->assets/img/e/day/jazz_x2.jpg 2x" alt="Джазовый теплоход" class="img-responsive h3 img-rounded img-item">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="trip.html" class="h3"><h3>Джазовый теплоход</h3></a>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">2 часовой джазовый концерт</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Профессиональные музыканты</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Уникальный ресторан на воде</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Классика вечернего Петербурга</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                1080 <i class="fa fa-rub fa-xs"></i>
+                <small class="trip__price_sm">1200 <i class="fa fa-rub fa-xs"></i> на причале</small>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="night">
+      <div class="divider"></div>
+      <div class="img-bg" style="background-image: url('<!-- @echo homepage -->assets/img/e/night/bg.jpg');">
+        <div class="container">
+          <h2 class="alpha-bg">Ночные прогулки под развод мостов</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/night/salut-na-den-vmf.jpg" srcset="<!-- @echo homepage -->assets/img/e/night/salut-na-den-vmf_x2.jpg 2x" alt="Салют в День ВМФ 2015 на теплоходе" class="img-responsive h3 img-rounded img-item">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="trip.html" class="h3"><h3>Салют в День ВМФ 2015 на теплоходе</h3></a>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Просмотр всех военных кораблей с борта теплохода</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Живая музыка - ретро программа</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Комфортабельный двухпалубный теплоход</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Длительность 1,5 часа</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                790 <i class="fa fa-rub fa-xs"></i>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/night/nochnaya-ekskursiya-pod-razvod-mostov.jpg" srcset="<!-- @echo homepage -->assets/img/e/night/nochnaya-ekskursiya-pod-razvod-mostov_x2.jpg 2x" alt="АКЦИЯ - Экскурсия под развод мостов на 2-палубном теплоходе" class="img-responsive h3 img-rounded img-item">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="trip.html" class="h3"><h3>АКЦИЯ - Экскурсия под развод мостов на 2-палубном теплоходе</h3></a>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">С вс по чт -20% от обычной цены </span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Расширенный маршрут</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">1,5 часовая экскурсия</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Двухпалубный комфортабельный теплоход</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                640 <i class="fa fa-rub fa-xs"></i>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/night/music.jpg" srcset="<!-- @echo homepage -->assets/img/e/night/music_x2.jpg 2x" alt="Музыкальный теплоход «Ночной&nbsp;Петербург»" class="img-responsive h3 img-rounded img-item">
+            </a>
+          </div>
+
+          <div class="col-sm-6">
+
+            <a href="trip.html" class="h3"><h3>Музыкальный теплоход «Ночной&nbsp;Петербург»</h3></a>
+
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Маршрут по 6 разводным мостам</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">2 часа живой музыки</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Вся акватория центрального Петербурга</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Двухпалубный теплоход, закрытая и открытая палубы</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                780 <i class="fa fa-rub fa-xs"></i>
+                <small class="trip__price_sm">900 <i class="fa fa-rub fa-xs"></i> на причале</small>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/night/nochnaya-progulka-pod-razvod-mostov.jpg" srcset="<!-- @echo homepage -->assets/img/e/night/nochnaya-progulka-pod-razvod-mostov_x2.jpg 2x" alt="Ночная прогулка на 2-палубном теплоходе" class="img-responsive h3 img-rounded img-item">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="trip.html" class="h3"><h3>Ночная прогулка на 2-палубном теплоходе</h3></a>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">6 разводных мостов</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Двухпалубный комфортабельный теплоход</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">1,5 часовая прогулка</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Маршрут по всей Неве</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                670 <i class="fa fa-rub fa-xs"></i>
+                <small class="trip__price_sm">750 <i class="fa fa-rub fa-xs"></i> на причале</small>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/night/razvod-mostov.jpg" srcset="<!-- @echo homepage -->assets/img/e/night/razvod-mostov_x2.jpg 2x" alt="Ночная экскурсия под развод мостов на 1-палубном теплоходе" class="img-responsive h3 img-rounded img-item">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="trip.html" class="h3"><h3>Ночная экскурсия под развод мостов на 1-палубном теплоходе</h3></a>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Маршрут прогулки: Нева - Большая Невка</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">5 живописных разводных мостов</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Панорамное остекление теплохода</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Экскурсия - 1,5 часа</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                590 <i class="fa fa-rub fa-xs"></i>
+                <small class="trip__price_sm">700 <i class="fa fa-rub fa-xs"></i> на причале</small>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/night/retro.jpg" srcset="<!-- @echo homepage -->assets/img/e/night/retro_x2.jpg 2x" alt="Дискотека на теплоходе в стиле 80-90х" class="img-responsive h3 img-rounded img-item">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="trip.html" class="h3"><h3>Дискотека на теплоходе в стиле 80-90х</h3></a>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Плавучий «ночной клуб»</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Зажигательные песни 80-90х</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Продолжительность: 3 часа</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Бар и две палубы для танцев</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                1340 <i class="fa fa-rub fa-xs"></i>
+                <small class="trip__price_sm">1500 <i class="fa fa-rub fa-xs"></i> на причале</small>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="row trip">
-        <div class="col-sm-5">
-          <a href="trip.html">
-            <img src="<!-- @echo homepage -->assets/img/e/day/finski-zaliv.jpg" srcset="<!-- @echo homepage -->assets/img/e/day/finski-zaliv_x2.jpg 2x" alt="Прогулка по Неве с выходом в Финский&nbsp;залив" class="img-responsive h3 img-rounded img-item">
-          </a>
+    <div id="meteors">
+      <div class="divider"></div>
+      <div class="img-bg" style="background-image: url('<!-- @echo homepage -->assets/img/e/meteors/bg.jpg');">
+        <div class="container">
+          <h2 class="alpha-bg">Метеор в Петергоф и не только</h2>
         </div>
-        <div class="col-sm-6">
-          <a href="trip.html" class="h3"><h3>Прогулка по Неве с выходом в Финский&nbsp;залив</h3></a>
-          <ul class="fa-ul">
-           <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Все основные достопримечательности за 1,5 часа</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Комфортабельный двухпалубный теплоход-ресторан</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Просторы Финского залива</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Отправление каждые 2 часа с 12 до 18</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">530 <i class="fa fa-rub fa-xs"></i></span>
-            <small class="sub-price">600 <i class="fa fa-rub fa-xs"></i> на причале</small>
+      </div>
+      <div class="container">
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/meteors/petergof.jpg" srcset="<!-- @echo homepage -->assets/img/e/meteors/petergof_x2.jpg 2x" alt="Метеор в Петергоф" class="img-responsive h3 img-rounded img-item">
+            </a>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row trip">
-      <div class="col-sm-5">
-        <a href="trip.html">
-          <img src="<!-- @echo homepage -->assets/img/e/day/hop-on-hop-off.jpg" srcset="<!-- @echo homepage -->assets/img/e/day/hop-on-hop-off_x2.jpg 2x" alt="Обзорная экскурсия по рекам и каналам с остановками Hop on Hop Off" class="img-responsive h3 img-rounded img-item">
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <a href="trip.html" class="h3"><h3>Обзорная экскурсия по рекам и каналам с остановками Hop on Hop Off</h3></a>
-        <ul class="fa-ul">
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">6 остановок у главных достопримечательностей</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Неограниченное число катаний</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Билет на 1 или 2 дня</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Идеальный способ изучить город за день</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">690 <i class="fa fa-rub fa-xs"></i></span>
-            <small class="sub-price">800 <i class="fa fa-rub fa-xs"></i> на причале</small>
+          <div class="col-sm-6">
+            <a href="trip.html" class="h3"><h3>Метеор в Петергоф</h3></a>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Самый красивый способ добраться до Петергофа</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Всего за 35 минут</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Метеоры повышенной комфортности</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Билет действует целый день</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                620 <i class="fa fa-rub fa-xs"></i>
+                <small class="trip__price_sm">700 <i class="fa fa-rub fa-xs"></i> на причале</small>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
         </div>
-      </div>
-    </div>
 
-    <div class="row trip">
-      <div class="col-sm-5">
-        <a href="trip.html">
-          <img src="<!-- @echo homepage -->assets/img/e/day/severnie-ostrova.jpg" srcset="<!-- @echo homepage -->assets/img/e/day/severnie-ostrova_x2.jpg 2x" alt="Забытые острова с выходом в Финский залив" class="img-responsive h3 img-rounded img-item">
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <a href="trip.html" class="h3"><h3>Забытые острова с выходом в Финский залив</h3></a>
-        <ul class="fa-ul">
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Исторический центр и островной парковый ансамбль</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Двухпалубный теплоход с открытой второй палубой</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Самая продолжительная водная экскурсия: 2 часа</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Билет действует целый день</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">650 <i class="fa fa-rub fa-xs"></i></span>
-            <small class="sub-price">700 <i class="fa fa-rub fa-xs"></i> на причале</small>
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/meteors/krondshtadt.jpg" srcset="<!-- @echo homepage -->assets/img/e/meteors/krondshtadt_x2.jpg 2x" alt="Экскурсия на метеоре в Кронштадт" class="img-responsive h3 img-rounded img-item">
+            </a>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row trip">
-      <div class="col-sm-5">
-        <a href="trip.html">
-          <img src="<!-- @echo homepage -->assets/img/e/day/po-rekam-i-kanalam.jpg" srcset="<!-- @echo homepage -->assets/img/e/day/po-rekam-i-kanalam_x2.jpg 2x" alt="Реки и каналы центрального Петербурга" class="img-responsive h3 img-rounded img-item">
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <a href="trip.html" class="h3"><h3>Реки и каналы центрального Петербурга</h3></a>
-        <ul class="fa-ul">
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">15 мостов, 4 реки и канала</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Отправление каждые 30 минут, билет на день</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Атмосфера «Северной Венеции»</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Теплоход с панорамным остеклением и открытой палубой</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">490 <i class="fa fa-rub fa-xs"></i></span>
-            <small class="sub-price">600 <i class="fa fa-rub fa-xs"></i> на причале</small>
+          <div class="col-sm-6">
+            <a href="trip.html" class="h3"><h3>Экскурсия на метеоре в Кронштадт</h3></a>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Прогулка на метеоре по Финскому заливу</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">1,5 часа экскурсия по достопримечательностям города</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Посещение Морского собора Кронштадта</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Обратный путь с осмотром военных фортов</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                1340 <i class="fa fa-rub fa-xs"></i>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
         </div>
-      </div>
-    </div>
 
-    <div class="row trip">
-      <div class="col-sm-5">
-        <a href="trip.html">
-          <img src="<!-- @echo homepage -->assets/img/e/day/jazz.jpg" srcset="<!-- @echo homepage -->assets/img/e/day/jazz_x2.jpg 2x" alt="Джазовый теплоход" class="img-responsive h3 img-rounded img-item">
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <a href="trip.html" class="h3"><h3>Джазовый теплоход</h3></a>
-        <ul class="fa-ul">
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">2 часовой джазовый концерт</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Профессиональные музыканты</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Уникальный ресторан на воде</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Классика вечернего Петербурга</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">1080 <i class="fa fa-rub fa-xs"></i></span>
-            <small class="sub-price">1200 <i class="fa fa-rub fa-xs"></i> на причале</small>
+        <div class="row trip">
+          <div class="col-sm-5">
+            <a href="trip.html">
+              <img src="<!-- @echo homepage -->assets/img/e/meteors/oreshek.jpg" srcset="<!-- @echo homepage -->assets/img/e/meteors/oreshek_x2.jpg 2x" alt="Экcурсия в Орешек на метеоре" class="img-responsive h3 img-rounded img-item">
+            </a>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div id="night">
-  <div class="divider"></div>
-  <div class="img-bg" style="background-image: url('<!-- @echo homepage -->assets/img/e/night/bg.jpg');">
-    <div class="container">
-      <h2 class="alpha-bg">Ночные прогулки под развод мостов</h2>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row trip">
-      <div class="col-sm-5">
-        <a href="trip.html">
-          <img src="<!-- @echo homepage -->assets/img/e/night/salut-na-den-vmf.jpg" srcset="<!-- @echo homepage -->assets/img/e/night/salut-na-den-vmf_x2.jpg 2x" alt="Салют в День ВМФ 2015 на теплоходе" class="img-responsive h3 img-rounded img-item">
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <a href="trip.html" class="h3"><h3>Салют в День ВМФ 2015 на теплоходе</h3></a>
-        <ul class="fa-ul">
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Просмотр всех военных кораблей с борта теплохода</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Живая музыка - ретро программа</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Комфортабельный двухпалубный теплоход</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Длительность 1,5 часа</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">790 <i class="fa fa-rub fa-xs"></i></span>
+          <div class="col-sm-6">
+            <a href="trip.html" class="h3"><h3>Экcурсия в Орешек на метеоре</h3></a>
+            <ul class="fa-ul">
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">5-ти часовой круиз со скорость 60 км\ч</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Экскурсия по крепости XIII века</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Питание на борту</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">По всей Неве: от устья до истока</span>
+              </li>
+            </ul>
+            <div class="trip__action">
+              <div class="trip__price">
+                1650 <i class="fa fa-rub fa-xs"></i>
+              </div>
+              <a href="trip.html" class="trip__btn">Подробнее &rarr;</a>
+            </div>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
         </div>
       </div>
     </div>
 
-    <div class="row trip">
-      <div class="col-sm-5">
-        <a href="trip.html">
-          <img src="<!-- @echo homepage -->assets/img/e/night/nochnaya-ekskursiya-pod-razvod-mostov.jpg" srcset="<!-- @echo homepage -->assets/img/e/night/nochnaya-ekskursiya-pod-razvod-mostov_x2.jpg 2x" alt="АКЦИЯ - Экскурсия под развод мостов на 2-палубном теплоходе" class="img-responsive h3 img-rounded img-item">
-        </a>
+    <div id="arenda">
+      <div class="divider"></div>
+      <div class="img-bg" style="background-image: url('<!-- @echo homepage -->assets/img/e/arenda/bg.jpg');">
+        <div class="container">
+          <h2 class="alpha-bg">Аренда теплохода на свадьбу и корпоратив</h2>
+        </div>
       </div>
-      <div class="col-sm-6">
-        <a href="trip.html" class="h3"><h3>АКЦИЯ - Экскурсия под развод мостов на 2-палубном теплоходе</h3></a>
-        <ul class="fa-ul">
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">С вс по чт -20% от обычной цены </span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Расширенный маршрут</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">1,5 часовая экскурсия</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Двухпалубный комфортабельный теплоход</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">640 <i class="fa fa-rub fa-xs"></i></span>
+      <div class="container">
+        <div class="row lead text-center trip">
+          <div class="col-sm-3">
+            <p><b class="text-primary fa fa-2x">-5%</b></p>
+            <p>Любой теплоход <b>дешевле</b>, чем у владельцев!</p>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row trip">
-      <div class="col-sm-5">
-        <a href="trip.html">
-          <img src="<!-- @echo homepage -->assets/img/e/night/music.jpg" srcset="<!-- @echo homepage -->assets/img/e/night/music_x2.jpg 2x" alt="Музыкальный теплоход «Ночной&nbsp;Петербург»" class="img-responsive h3 img-rounded img-item">
-        </a>
-      </div>
-
-      <div class="col-sm-6">
-
-        <a href="trip.html" class="h3"><h3>Музыкальный теплоход «Ночной&nbsp;Петербург»</h3></a>
-
-        <ul class="fa-ul">
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Маршрут по 6 разводным мостам</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">2 часа живой музыки</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Вся акватория центрального Петербурга</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Двухпалубный теплоход, закрытая и открытая палубы</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">780 <i class="fa fa-rub fa-xs"></i></span>
-            <small class="sub-price">900 <i class="fa fa-rub fa-xs"></i> на причале</small>
+          <div class="col-sm-3">
+            <p><i class="text-primary fa fa-glass fa-2x"></i></p>
+            <p>Свадьба на теплоходе</p>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row trip">
-      <div class="col-sm-5">
-        <a href="trip.html">
-          <img src="<!-- @echo homepage -->assets/img/e/night/nochnaya-progulka-pod-razvod-mostov.jpg" srcset="<!-- @echo homepage -->assets/img/e/night/nochnaya-progulka-pod-razvod-mostov_x2.jpg 2x" alt="Ночная прогулка на 2-палубном теплоходе" class="img-responsive h3 img-rounded img-item">
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <a href="trip.html" class="h3"><h3>Ночная прогулка на 2-палубном теплоходе</h3></a>
-        <ul class="fa-ul">
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">6 разводных мостов</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Двухпалубный комфортабельный теплоход</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">1,5 часовая прогулка</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Маршрут по всей Неве</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">670 <i class="fa fa-rub fa-xs"></i></span>
-            <small class="sub-price">750 <i class="fa fa-rub fa-xs"></i> на причале</small>
+          <div class="col-sm-3">
+            <p><i class="text-primary fa fa-key fa-2x"></i></p>
+            <p>Мероприятия под ключ</p>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row trip">
-      <div class="col-sm-5">
-        <a href="trip.html">
-          <img src="<!-- @echo homepage -->assets/img/e/night/razvod-mostov.jpg" srcset="<!-- @echo homepage -->assets/img/e/night/razvod-mostov_x2.jpg 2x" alt="Ночная экскурсия под развод мостов на 1-палубном теплоходе" class="img-responsive h3 img-rounded img-item">
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <a href="trip.html" class="h3"><h3>Ночная экскурсия под развод мостов на 1-палубном теплоходе</h3></a>
-        <ul class="fa-ul">
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Маршрут прогулки: Нева - Большая Невка</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">5 живописных разводных мостов</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Панорамное остекление теплохода</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Экскурсия - 1,5 часа</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">590 <i class="fa fa-rub fa-xs"></i></span>
-            <small class="sub-price">700 <i class="fa fa-rub fa-xs"></i> на причале</small>
+          <div class="col-sm-3">
+            <p><i class="text-primary fa fa-ship fa-2x"></i></p>
+            <p>Все теплоходы СПб</p>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
         </div>
-      </div>
-    </div>
 
-    <div class="row trip">
-      <div class="col-sm-5">
-        <a href="trip.html">
-          <img src="<!-- @echo homepage -->assets/img/e/night/retro.jpg" srcset="<!-- @echo homepage -->assets/img/e/night/retro_x2.jpg 2x" alt="Дискотека на теплоходе в стиле 80-90х" class="img-responsive h3 img-rounded img-item">
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <a href="trip.html" class="h3"><h3>Дискотека на теплоходе в стиле 80-90х</h3></a>
-        <ul class="fa-ul">
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Плавучий «ночной клуб»</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Зажигательные песни 80-90х</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Продолжительность: 3 часа</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Бар и две палубы для танцев</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">1340 <i class="fa fa-rub fa-xs"></i></span>
-            <small class="sub-price">1500 <i class="fa fa-rub fa-xs"></i> на причале</small>
+        <div class="row trip">
+          <div class="col-sm-10 col-sm-offset-1">
+            <p>Аренда теплохода дешевле, чем у владельца - это реально! Мы получаем комиссию от той цены, которую называет вам собственник. И если другие агентства меняют цены в свою пользу, мы делаем вам скидку 5% на прогулку на теплоходе за счёт своей комиссии.</p>
+            <p>Закажите теплоход на выпускной, свадьбу, вечеринку или просто прогулку. Все остальные заботы мы возьмем на себя:</p>
+            <ul>
+              <li>организуем кейтеринг;</li>
+              <li>пригласим музыкантов, фотографов, операторов;</li>
+              <li>украсим теплоход для свадьбы и исполним любое другое  желание;</li>
+              <li>устроим прогулку на яхте по Финскому заливу или катере.</li>
+            </ul>
+            <p>Если вам не хочется отмечать важное событие в кафе или ресторане, если вы хотите удивить гостей, выбирайте праздник на теплоходе! Настоящий ресторан на воде не только порадует прекрасной кухней, из окон корабля откроется великолепный вид на Санкт-Петербург и самые главные его достопримечательности.</p>
+            <p>Аренда теплохода для свадьбы или другого торжества будет стоить практически также, как вечер в обычном ресторане, но впечатления от такого праздника будут гораздо ярче! Демократичные цены на аренду теплохода позволят провести любое торжество так, как вы мечтали.</p>
+            <p>Напишите нам на
+              <a href="mailto:info@nevatrip.ru">info@nevatrip.ru</a> или позвоните по телефону 8 812 965-34-04 для уточнения стоимости теплохода или заказа праздника, и мы свяжемся с Вами в ближайшее время!
+            </p>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<div id="meteors">
-  <div class="divider"></div>
-  <div class="img-bg" style="background-image: url('<!-- @echo homepage -->assets/img/e/meteors/bg.jpg');">
-    <div class="container">
-      <h2 class="alpha-bg">Метеор в Петергоф и не только</h2>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row trip">
-      <div class="col-sm-5">
-        <a href="trip.html">
-          <img src="<!-- @echo homepage -->assets/img/e/meteors/petergof.jpg" srcset="<!-- @echo homepage -->assets/img/e/meteors/petergof_x2.jpg 2x" alt="Метеор в Петергоф" class="img-responsive h3 img-rounded img-item">
-        </a>
+    <div id="nevatrip">
+      <div class="divider"></div>
+      <div class="img-bg" style="background-image: url('<!-- @echo homepage -->assets/img/e/nevatrip/bg.jpg');">
+        <div class="container">
+          <h2 class="alpha-bg">Почему NevaTrip?</h2>
+        </div>
       </div>
-      <div class="col-sm-6">
-        <a href="trip.html" class="h3"><h3>Метеор в Петергоф</h3></a>
-        <ul class="fa-ul">
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Самый красивый способ добраться до Петергофа</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Всего за 35 минут</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Метеоры повышенной комфортности</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Билет действует целый день</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">620 <i class="fa fa-rub fa-xs"></i></span>
-            <small class="sub-price">700 <i class="fa fa-rub fa-xs"></i> на причале</small>
+      <div class="container">
+        <div class="row lead text-center trip">
+          <div class="col-sm-3">
+            <p><i class="text-primary fa fa-thumbs-o-up fa-2x"></i></p>
+            <p>Лучшие маршруты по лучшим ценам</p>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row trip">
-      <div class="col-sm-5">
-        <a href="trip.html">
-          <img src="<!-- @echo homepage -->assets/img/e/meteors/krondshtadt.jpg" srcset="<!-- @echo homepage -->assets/img/e/meteors/krondshtadt_x2.jpg 2x" alt="Экскурсия на метеоре в Кронштадт" class="img-responsive h3 img-rounded img-item">
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <a href="trip.html" class="h3"><h3>Экскурсия на метеоре в Кронштадт</h3></a>
-        <ul class="fa-ul">
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Прогулка на метеоре по Финскому заливу</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">1,5 часа экскурсия по достопримечательностям города</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Посещение Морского собора Кронштадта</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Обратный путь с осмотром военных фортов</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">1340 <i class="fa fa-rub fa-xs"></i></span>
+          <div class="col-sm-3">
+            <p><i class="text-primary fa fa-anchor fa-2x"></i></p>
+            <p>Только надежные теплоходные компании: Нева Тревел компани, Астрамарин, Минхерц</p>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row trip">
-      <div class="col-sm-5">
-        <a href="trip.html">
-          <img src="<!-- @echo homepage -->assets/img/e/meteors/oreshek.jpg" srcset="<!-- @echo homepage -->assets/img/e/meteors/oreshek_x2.jpg 2x" alt="Экcурсия в Орешек на метеоре" class="img-responsive h3 img-rounded img-item">
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <a href="trip.html" class="h3"><h3>Экcурсия в Орешек на метеоре</h3></a>
-        <ul class="fa-ul">
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">5-ти часовой круиз со скорость 60 км\ч</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Экскурсия по крепости XIII века</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Питание на борту</span>
-          </li>
-          <li>
-            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">По всей Неве: от устья до истока</span>
-          </li>
-        </ul>
-        <div class="clearfix" style="margin-bottom: 14px;">
-          <div class="pull-left">
-            <span class="price">1650 <i class="fa fa-rub fa-xs"></i></span>
+          <div class="col-sm-3">
+            <p><i class="text-primary fa fa-users fa-2x"></i></p>
+            <p>Более 30 партнеров в городе</p>
           </div>
-          &nbsp;
-          &nbsp;
-          <a href="trip.html" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
+          <div class="col-sm-3">
+            <p><i class="text-primary fa fa-trophy fa-2x"></i></p>
+            <p>Лучший проект 2014 года всероссийской программы &laquo;Ты&nbsp;— предприниматель&raquo;</p>
+          </div>
+        </div>
+        <div class="row trip">
+          <div class="col-sm-10 col-sm-offset-1">
+            <p>Nevatrip - это сайт экскурсий Петербурга. Мы предлагаем самые интересные маршруты экскурсий на теплоходе от известных теплоходных компаний по действительно лучшим ценам. Наши цены на прогулки по рекам и каналам Петербурга – самые выгодные не только по сравнению с ценой на причалах, но и в интернете. Мы с удовольствием делаем скидки гостям и жителям прекрасного города!</p>
+            <p>Поддержка 24/7 и максимальная клиентоориентированность - это то, что мы предлагаем нашим будущим и действующим клиентам и чем мы гордимся.</p>
+            <p>Для того чтобы вам было удобно, мы предлагаем продажу электронных билетов на теплоход через интернет. Вам не придется стоять в очереди и ждать. Всего несколько минут, и ваше место на экскурсии на теплоходе будет забронировано.</p>
+            <p>Только покупая билет на нашем сайте, Вам не придется фиксировать время отправления. Для большинства дневных экскурсий Вы просто выберете удобное Вам время уже в день теплоходной прогулки. Что особенно актуально для Петербурга с его переменчивой погодой.</p>
+            <p>Наша компания предлагает вам не просто билеты на самые увлекательные прогулки по рекам и каналам Петербурга и его окрестностям. Водные экскурсии по прекрасной северной столице подарят вам незабываемые впечатления, которые останутся в душе надолго.  С нами вы можете отправиться на теплоходную экскурсию по рекам и каналам Петербурга по Неве, посетить Петергоф и крепость «Орешек» и прогуляться по славному городу-герою Кронштадту.</p>
+            <p>Удивительные памятники истории и архитектуры откроются для вас с новой стороны. Водные экскурсии позволят узнать новые факты о Кунсткамере, Зимнем дворце, Михайловском замке, крейсере «Аврора» и других достопримечательностях Питера. Такие прогулки будут интересны как гостям Петербурга, так и тем, кто живет здесь давно, но хочет узнать что-то новое о родном городе. Речные прогулки предоставят такую возможность. </p>
+            <p>Незабываемым будет вечер на теплоходе в компании с близким человеком. Обратите внимание на романтический джазовый теплоход и экскурсию под развод мостов. Оценят экскурсии по рекам и каналам Петербурга и дети, поэтому часто к нам обращаются школы и другие образовательные учреждения, ведь во время таких путешествий быстрее усваиваются новые знания.</p>
+            <p>Для того чтобы экскурсии по рекам и каналам Санкт-Петербурга проходили в комфортной обстановке, все теплоходы оснащены по последнему слову техники. Во время водных экскурсий по Петербургу из окон комфортабельного салона откроется прекрасный вид на пейзажи, а пока вы будете наблюдать за ними, экскурсовод будет рассказывать интересные факты об истории города. Во время длительных речных прогулок можно перекусить в баре. Также на некоторых экскурсиях работает ресторан.</p>
+            <p>Отдыхайте увлекательно и с комфортом с нашим магазином экскурсий по Санкт-Петербургу.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <h3 class="text-center">Сотрудничество</h3>
+            <p>
+              Мы открыты к сотрудничеству. Если у вас есть возможности онлайн или оффлайн продвижения наших экскурсий или Вам интересно продавать свои услуги через наш сайт, свяжитесь с нами по телефону 8 812 965-34-04 или напишите на
+              <a href="mailto:info@nevatrip.ru">info@nevatrip.ru</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </div>
+
+    <hr>
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-2">
+          <p class="h4">
+            <span itemprop="email"><a href="mailto:info@nevatrip.ru" target="_blank">info@nevatrip.ru</a></span>
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <p class="h4">
+            <span itemprop="telephone"><a href="tel:88129653404">8 812 965-34-04</a></span>
+          </p>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<div id="arenda">
-  <div class="divider"></div>
-  <div class="img-bg" style="background-image: url('<!-- @echo homepage -->assets/img/e/arenda/bg.jpg');">
-    <div class="container">
-      <h2 class="alpha-bg">Аренда теплохода на свадьбу и корпоратив</h2>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row text-center trip">
-      <div class="col-sm-6 col-md-3">
-        <p class="text-center text-primary" style="font-size: 30px;font-weight: bold;line-height: 1;">-5%</p>
-        <p class="lead">Любой теплоход <b>дешевле</b>, чем у владельцев!</p>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <p class="text-center text-primary"><i class="fa fa-glass fa-2x"></i></p>
-        <p class="lead">Свадьба на теплоходе</p>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <p class="text-center text-primary"><i class="fa fa-key fa-2x"></i></p>
-        <p class="lead">Мероприятия под ключ</p>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <p class="text-center text-primary"><i class="fa fa-ship fa-2x"></i></p>
-        <p class="lead">Все теплоходы СПб</p>
-      </div>
-    </div>
+    <hr>
 
-    <div class="row trip">
-      <div class="col-sm-10 col-sm-offset-1">
-        <p>Аренда теплохода дешевле, чем у владельца - это реально! Мы получаем комиссию от той цены, которую называет вам собственник. И если другие агентства меняют цены в свою пользу, мы делаем вам скидку 5% на прогулку на теплоходе за счёт своей комиссии.</p>
-        <p>Закажите теплоход на выпускной, свадьбу, вечеринку или просто прогулку. Все остальные заботы мы возьмем на себя:</p>
-        <ul>
-          <li>организуем кейтеринг;</li>
-          <li>пригласим музыкантов, фотографов, операторов;</li>
-          <li>украсим теплоход для свадьбы и исполним любое другое  желание;</li>
-          <li>устроим прогулку на яхте по Финскому заливу или катере.</li>
-        </ul>
-        <p>Если вам не хочется отмечать важное событие в кафе или ресторане, если вы хотите удивить гостей, выбирайте праздник на теплоходе! Настоящий ресторан на воде не только порадует прекрасной кухней, из окон корабля откроется великолепный вид на Санкт-Петербург и самые главные его достопримечательности.</p>
-        <p>Аренда теплохода для свадьбы или другого торжества будет стоить практически также, как вечер в обычном ресторане, но впечатления от такого праздника будут гораздо ярче! Демократичные цены на аренду теплохода позволят провести любое торжество так, как вы мечтали.</p>
-        <p>Напишите нам на
-          <a href="mailto:info@nevatrip.ru">info@nevatrip.ru</a> или позвоните по телефону 8 812 965-34-04 для уточнения стоимости теплохода или заказа праздника, и мы свяжемся с Вами в ближайшее время!
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="nevatrip">
-  <div class="divider"></div>
-  <div class="img-bg" style="background-image: url('<!-- @echo homepage -->assets/img/e/nevatrip/bg.jpg');">
-    <div class="container">
-      <h2 class="alpha-bg">Почему NevaTrip?</h2>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row text-center trip">
-      <div class="col-md-3">
-        <p class="text-center text-primary"><i class="fa fa-thumbs-o-up fa-2x"></i></p>
-        <p class="lead">Лучшие маршруты по лучшим ценам</p>
-      </div>
-      <div class="col-md-3">
-        <p class="text-center text-primary"><i class="fa fa-anchor fa-2x"></i></p>
-        <p class="lead">Только надежные теплоходные компании: Нева Тревел компани, Астрамарин, Минхерц</p>
-      </div>
-      <div class="col-md-3">
-        <p class="text-center text-primary"><i class="fa fa-users fa-2x"></i></p>
-        <p class="lead">Более 30 партнеров в городе</p>
-      </div>
-      <div class="col-md-3">
-        <p class="text-center text-primary"><i class="fa fa-trophy fa-2x"></i></p>
-        <p class="lead">Лучший проект 2014 года всероссийской программы &laquo;Ты&nbsp;—&nbsp;предприниматель&raquo;</p>
-      </div>
-    </div>
-
-    <div class="row trip">
-      <div class="col-sm-10 col-sm-offset-1">
-        <p>Nevatrip - это сайт экскурсий Петербурга. Мы предлагаем самые интересные маршруты экскурсий на теплоходе от известных теплоходных компаний по действительно лучшим ценам. Наши цены на прогулки по рекам и каналам Петербурга – самые выгодные не только по сравнению с ценой на причалах, но и в интернете. Мы с удовольствием делаем скидки гостям и жителям прекрасного города!</p>
-        <p>Поддержка 24/7 и максимальная клиентоориентированность - это то, что мы предлагаем нашим будущим и действующим клиентам и чем мы гордимся.</p>
-        <p>Для того чтобы вам было удобно, мы предлагаем продажу электронных билетов на теплоход через интернет. Вам не придется стоять в очереди и ждать. Всего несколько минут, и ваше место на экскурсии на теплоходе будет забронировано.</p>
-        <p>Только покупая билет на нашем сайте, Вам не придется фиксировать время отправления. Для большинства дневных экскурсий Вы просто выберете удобное Вам время уже в день теплоходной прогулки. Что особенно актуально для Петербурга с его переменчивой погодой.</p>
-        <p>Наша компания предлагает вам не просто билеты на самые увлекательные прогулки по рекам и каналам Петербурга и его окрестностям. Водные экскурсии по прекрасной северной столице подарят вам незабываемые впечатления, которые останутся в душе надолго.  С нами вы можете отправиться на теплоходную экскурсию по рекам и каналам Петербурга по Неве, посетить Петергоф и крепость «Орешек» и прогуляться по славному городу-герою Кронштадту.</p>
-        <p>Удивительные памятники истории и архитектуры откроются для вас с новой стороны. Водные экскурсии позволят узнать новые факты о Кунсткамере, Зимнем дворце, Михайловском замке, крейсере «Аврора» и других достопримечательностях Питера. Такие прогулки будут интересны как гостям Петербурга, так и тем, кто живет здесь давно, но хочет узнать что-то новое о родном городе. Речные прогулки предоставят такую возможность. </p>
-        <p>Незабываемым будет вечер на теплоходе в компании с близким человеком. Обратите внимание на романтический джазовый теплоход и экскурсию под развод мостов. Оценят экскурсии по рекам и каналам Петербурга и дети, поэтому часто к нам обращаются школы и другие образовательные учреждения, ведь во время таких путешествий быстрее усваиваются новые знания.</p>
-        <p>Для того чтобы экскурсии по рекам и каналам Санкт-Петербурга проходили в комфортной обстановке, все теплоходы оснащены по последнему слову техники. Во время водных экскурсий по Петербургу из окон комфортабельного салона откроется прекрасный вид на пейзажи, а пока вы будете наблюдать за ними, экскурсовод будет рассказывать интересные факты об истории города. Во время длительных речных прогулок можно перекусить в баре. Также на некоторых экскурсиях работает ресторан.</p>
-        <p></p>
-        <p>Отдыхайте увлекательно и с комфортом с нашим магазином экскурсий по Санкт-Петербургу.</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-1">
-        <h3 class="text-center">Сотрудничество</h3>
+    <footer class="footer">
+      <div class="container">
         <p>
-          Мы открыты к сотрудничеству. Если у вас есть возможности онлайн или оффлайн продвижения наших экскурсий или Вам интересно продавать свои услуги через наш сайт, свяжитесь с нами по телефону 8 812 965-34-04 или напишите на
-          <a href="mailto:info@nevatrip.ru">info@nevatrip.ru</a>
+          <small>&copy; 2014, ООО "Про Событие", ИНН 7802873242, КПП 780201001, ОГРН 1147847350133. Санкт-Петербург, Манежный пер. 10</small>
         </p>
       </div>
-    </div>
-  </div>
-  <div class="divider"></div>
-</div>
+    </footer>
 
-<hr>
+    <!-- build:js scripts/vendor.js -->
+    <!-- @include ./components/_scripts/vendor.html -->
+    <!-- endbuild -->
 
-<div class="container text-center">
-  <div class="row">
-    <div class="col-md-4 col-md-offset-2">
-      <p class="h4">
-        <span itemprop="email"><a href="mailto:info@nevatrip.ru" target="_blank">info@nevatrip.ru</a></span>
-      </p>
-    </div>
-    <div class="col-md-4">
-      <p class="h4">
-        <span itemprop="telephone"><a href="tel:88129653404">8 812 965-34-04</a></span>
-      </p>
-    </div>
-  </div>
-</div>
+    <!-- build:js scripts/plugins.js -->
+    <!-- @include ./components/_scripts/plugins.html -->
+    <!-- endbuild -->
 
-<hr>
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
 
-<footer class="footer">
-  <div class="container">
-    <p>
-      <small>&copy; 2014, ООО "Про Событие", ИНН 7802873242, КПП 780201001, ОГРН 1147847350133. Санкт-Петербург, Манежный пер. 10</small>
-    </p>
-  </div>
-</footer>
-
-<!-- build:js scripts/vendor.js -->
-<!-- bower:js -->
-<script src="/bower_components/jquery/dist/jquery.js"></script>
-<!-- <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script> -->
-<script src="/bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-<script src="/bower_components/blueimp-gallery/js/blueimp-helper.js"></script>
-<script src="/bower_components/blueimp-gallery/js/blueimp-gallery.js"></script>
-<script src="/bower_components/blueimp-gallery/js/blueimp-gallery-fullscreen.js"></script>
-<script src="/bower_components/blueimp-gallery/js/blueimp-gallery-indicator.js"></script>
-<script src="/bower_components/blueimp-gallery/js/blueimp-gallery-video.js"></script>
-<script src="/bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
-<script src="/bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
-
-<!-- build:js scripts/plugins.js -->
-<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-<!-- <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script> -->
-<!-- <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script> -->
-<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-<!-- <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script> -->
-<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-<!-- <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script> -->
-<!-- endbuild -->
-
-<!-- build:js scripts/main.js -->
-<script src="scripts/main.js"></script>
-<!-- endbuild -->
-</body>
-</html>
+    <!-- @include ./components/counters/Yandex.Metrika.html -->
+    <!-- @include ./components/counters/Google.Analytics.html -->
+    <!-- @include ./components/counters/Mail.Counter.html -->
+  </body>
+  </html>
