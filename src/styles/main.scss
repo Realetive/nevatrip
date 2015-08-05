@@ -224,6 +224,7 @@ $img-bg-url:                     '../img/bg.jpg';
   float: none;
 
   @media (min-width: $screen-sm-min) {
+
     &::before {
       content: '';
       background: #e7e7e7;
@@ -232,15 +233,33 @@ $img-bg-url:                     '../img/bg.jpg';
       position: absolute;
       top: 15%;
       left: 0;
+      display: block;
     }
 
-    &:first-child:before {
+    &:first-child::before {
       display: none;
     }
   }
 
   & > a {
     padding: 5px 10px;
+
+    @media (min-width: $screen-sm-min) {
+      &::after {
+        content: '';
+        width: 1px;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+
+      &:focus::after,
+      &:hover::after {
+        background-color: $navbar-inverse-link-hover-bg;
+      }
+    }
   }
 }
 
