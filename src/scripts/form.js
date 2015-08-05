@@ -60,6 +60,7 @@ if ( $Form != null ) {
     , $Promocode     = document.getElementById( 'BuyFormPromocode' )
     , $Tickets       = document.querySelectorAll( '.buy-form-ticket' )
     , $TicketsPrices = document.querySelectorAll( '.buy-form-ticket-price' )
+    , $TicketsInput  = document.querySelectorAll( '.buy-form-ticket-input' )
     , $TicketsMinus  = document.querySelectorAll( '.buy-form-ticket-minus' )
     , $TicketsPlus   = document.querySelectorAll( '.buy-form-ticket-plus' );
   
@@ -107,32 +108,31 @@ if ( $Form != null ) {
   $($TripPoints).on('change', function(){
     var c = this.options.length;
     var o = this.options.selectedIndex;
-    if((c == (o + 1)) && !double){
-      Array.prototype.forEach.call($Tickets, function(el, i){
+    if( (c == ( o + 1 ) ) && !double ){
+      Array.prototype.forEach.call( $Tickets, function( el, i ) {
         var newPrice = arrayPriceDouble[ i ] > 0 ? arrayPriceDouble[ i ] : el.dataset.ticketPrice;
         el.dataset.originalTicketPrice = el.dataset.ticketPrice;
         el.dataset.ticketPrice = newPrice;
       });
       Array.prototype.forEach.call($TicketsPrices, function(el, i){
         var newPrice = arrayPriceDouble[ i ] > 0 ? arrayPriceDouble[ i ] : el.dataset.ticketPrice;
-        if(el.tagName == 'INPUT'){
-          el.value = newPrice;
-        } else{
-          el.innerHTML = newPrice;
-        }
+        el.innerHTML = newPrice;
+      });
+      Array.prototype.forEach.call($TicketsInput, function(el, i){
+        var newPrice = arrayPriceDouble[ i ] > 0 ? arrayPriceDouble[ i ] : el.dataset.ticketPrice;
+        el.value = newPrice;
       });
       double = true;
       recalcSum();
-    } else if(double){
+    } else if( double ) {
       Array.prototype.forEach.call($Tickets, function(el ,i){
         el.dataset.ticketPrice = el.dataset.originalTicketPrice;
       });
       Array.prototype.forEach.call($TicketsPrices, function(el ,i){
-        if(el.tagName == 'INPUT'){
-          el.value = el.dataset.ticketPrice;
-        } else{
-          el.innerHTML = el.dataset.ticketPrice;
-        }
+        el.innerHTML = el.dataset.ticketPrice;
+      });
+      Array.prototype.forEach.call($TicketsInput, function(el ,i){
+        el.value = el.dataset.ticketPrice;
       });
       double = false;
       recalcSum();
