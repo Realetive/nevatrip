@@ -1,1 +1,274 @@
-<!-- Trip -->
+<!doctype html>
+<html lang="<!-- @echo config.htmlLanguage -->" itemscope itemtype="http://schema.org/LocalBusiness">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<!-- @echo description -->">
+  <title><!-- @echo config.projectTitle --></title>
+  <base href="/">
+
+  <!-- @include ./components/_head/meta.google.html -->
+  <!-- @include ./components/_head/meta.open-graph.html -->
+
+  <!-- build:css styles/vendor.css -->
+  <!-- @include ./components/_styles/vendor.html -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+  <!-- @include ./components/_head/favicons.html -->
+
+</head>
+<body data-spy="scroll" data-target="#NavScrollSpy">
+    <!--[if lt IE 10]>
+    <!-- @include ./components/browserupgrade.html -->
+    <![endif]-->
+    <noscript>
+      <!-- @include ./components/noscript.html -->
+    </noscript>
+
+    <!-- @include ./components/topbar.html -->
+    <!-- @include ./components/navbar.html -->
+
+    <div class="jumbotron img-bg trip__header" style="background-image: url('<!-- @echo homepage -->assets/img/e/meteors/oreshek_bg.jpg');">
+      <div class="container">
+        <h1 class="alpha-bg">Экcурсия в Орешек на метеоре</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <ul class="fa-ul">
+            <li>
+              <i class="fa-li fa fa-circle text-warning"></i>
+              <span class="lead"><b>Длительность:</b> 5 часов</span>
+            </li>
+            <li>
+              <i class="fa-li fa fa-circle text-warning"></i>
+              <span class="lead"><b>Расписание:</b> 10.00(Пт-Вскр)</span>
+            </li>
+            <li>
+              <i class="fa-li fa fa-circle text-warning"></i>
+              <span class="lead"><b>Отправление:</b> <a href="https://maps.yandex.ru/-/CVGKJVkQ" target="_blank">Адмиралтейская наб. 2 (спуск со львами)</a></span>
+            </li>
+            <li>
+              <i class="fa-li fa fa-circle text-warning"></i>
+              <span class="lead"><b>Теплоход:</b> Теплоход Метеор</span>
+            </li>
+            <li>
+              <i class="fa-li fa fa-circle text-warning"></i>
+              <span class="lead"><b>Язык экскурсии:</b> <span class="flag-icon flag-icon-ru" title="Русский"></span>&nbsp;</span>
+            </li>
+            <li>
+              <i class="fa-li fa fa-circle text-warning"></i>
+              <span class="lead">
+                <b>На борту:</b>
+                <small>
+                  <span class="fa-stack" title="Экскурсия" style="margin-left: 0;">
+                    <i class="fa fa-square fa-stack-2x text-warning"></i>
+                    <i class="fa icon-microphone fa-stack-1x"></i>
+                  </span>
+                  <span class="fa-stack" title="Бар" style="margin-left: 0;">
+                    <i class="fa fa-square fa-stack-2x text-warning"></i>
+                    <i class="fa fa-glass fa-stack-1x"></i>
+                  </span>
+                  <span class="fa-stack" title="Еда" style="margin-left: 0;">
+                    <i class="fa fa-square fa-stack-2x text-warning"></i>
+                    <i class="fa fa-cutlery fa-stack-1x"></i>
+                  </span>
+                  <span class="fa-stack" title="Туалет" style="margin-left: 0;">
+                    <i class="fa fa-square fa-stack-2x text-warning"></i>
+                    <i class="fa icon-wc fa-stack-1x"></i>
+                  </span>
+                </small>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="fa-ul">
+            <li>
+              <i class="fa-li fa fa-circle text-warning"></i>
+              <span class="lead">
+                <b>Скидки:</b> есть
+                <button type="button" class="btn-link inner"
+                data-toggle="tooltip" 
+                title="Дети 3-12 лет. До 3 - бесплатно без представления отдельного места. Необходимо предъявить подтверждающие документы в кассе.
+                ">детский
+              </button>
+              (750р) билет. До 3 лет - бесплатно.
+            </span>
+          </li>
+        </ul>
+
+        <div style="margin-top: 20px;margin-bottom: 34px;">
+          <div class="pull-left">
+            <span class="price">1650 <i class="fa fa-rub fa-xs"></i></span>
+            <small class="sub-price">1800 <i class="fa fa-rub fa-xs"></i> на причале</small>
+          </div>
+          <a href="order.html" class="btn btn-warning btn-lg">Купить</a>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-sm-4 col-sm-push-8">
+        <h3 class="h4">Галерея</h3>
+        <div id="links">
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="gallery-item">
+                <a href="<!-- @echo homepage -->/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=940&amp;h=940&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F8%2F32.jpg" title=""  data-gallery>
+                  <img class="img-responsive" src="<!-- @echo homepage -->/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=150&amp;h=150&amp;zc=1&amp;far=C&amp;q=90&amp;src=%2Fassets%2Fgallery%2F8%2F32.jpg" alt="Метеор в Орешек"  />
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="gallery-item">
+                <a href="<!-- @echo homepage -->/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=940&amp;h=940&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F8%2F35.jpg" title="Обслуживание и питание на борту"  data-gallery>
+                  <img class="img-responsive" src="<!-- @echo homepage -->/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=150&amp;h=150&amp;zc=1&amp;far=C&amp;q=90&amp;src=%2Fassets%2Fgallery%2F8%2F35.jpg" alt="Метеор в Орешек"  />
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="gallery-item">
+                <a href="<!-- @echo homepage -->/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=940&amp;h=940&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F8%2F33.jpg" title="Экскурсия по древне-русской крепости"  data-gallery>
+                  <img class="img-responsive" src="<!-- @echo homepage -->/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=150&amp;h=150&amp;zc=1&amp;far=C&amp;q=90&amp;src=%2Fassets%2Fgallery%2F8%2F33.jpg" alt="Метеор в Орешек"  />
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="gallery-item">
+                <a href="<!-- @echo homepage -->/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=940&amp;h=940&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F8%2F34.jpg" title="Экскурсия по древне-русской крепости Орешек"  data-gallery>
+                  <img class="img-responsive" src="<!-- @echo homepage -->/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=150&amp;h=150&amp;zc=1&amp;far=C&amp;q=90&amp;src=%2Fassets%2Fgallery%2F8%2F34.jpg" alt="Метеор в Орешек"  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="h4">Вы увидите:</h3>
+        <ul class="fa-ul">
+          <li>
+            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Крепость орешек</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Кунсткамера</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Адмиралтейство</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Эрмитаж</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">стрелка Васильевского острова</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Петропавловская крепость</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Летний сад</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Смольный собор</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Александро-Невская лавра</span>
+          </li>
+          <li>
+            <i class="fa-li fa fa-chevron-down text-warning"></i>&nbsp;<span class="lead">Ладожское озеро</span>
+          </li>
+        </ul>
+
+        <div class="divider"></div>
+        <h3 class="h4">Ваши яркие воспоминания по лучшей цене</h3>
+        <div style="margin-top: 10px;margin-bottom: 20px;">
+          <div class="pull-left">
+            <span class="price">1650 <i class="fa fa-rub fa-xs"></i></span>
+          </div>
+          &nbsp;&nbsp;
+          <a href="order.html" class="btn btn-warning btn-lg">Купить</a>
+        </div>
+
+      </div>
+      <div class="col-sm-8 col-sm-pull-4">
+        <h3 class="h4">Об экскурсии</h3>
+        <div class="lead"><p><br /><strong>Экскурсия в Орешек на метеоре 2015</strong><br /><br />Рядом с Санкт-Петербургом находится исторически значимый архитектурный памятник - древнерусская крепость &laquo;Орешек&raquo;, построенная в далеком XIII веке. Она получила свое название в честь Орехового острова, на долю которого выпало немало испытаний. За долгое время своего существования &laquo;Орешек&raquo; успел побывать и в шведских, и в российских руках. Почти век шведы командовали крепостью, об этих временах осталось немало напоминаний.</p>
+          <p>Окутанная множеством легенд крепость стоит, словно нетронутая временем. Огромные ворота, каменные стены с откидным мостом напоминают нам о героических сражениях и сложных временах. Именно благодаря Орешку удалось защитить Дорогу жизни, по которой снабжался продовольствием осажденный фашистами Ленинград.</p>
+          <p>Во время экскурсии в крепость Орешек на метеоре корабль пройдет через акваторию Невы от истока до устья. Комфортабельный <strong>метеор в Орешек</strong> доставит с комфортом очень быстро.&nbsp; Под увлекательные рассказы экскурсовода вы не заметите, как пролетит время. &nbsp;<br /> <br /> По прибытии экскурсии в Орешек на причале нас встретит местный гид. Он покажет потайные уголки крепости, где когда-то находился тюремный флигель, проведет по подземным переходам между крепостными бастионами.<br /> <br /> <br /> В программу экскурсии в Шлиссельбург включены:</p>
+          <ul>
+            <li>морская прогулка на метеоре в крепость Орешек с экскурсионным сопровождением,</li>
+            <li>входной билет в крепость Орешек,</li>
+            <li>прогулка по крепости в сопровождении гида,</li>
+            <li>питание на борту метеора.</li>
+          </ul>
+          <p>
+            <strong>Экскурсии в Орешек</strong> на метеоре 2015 стартуют с пятницы по воскресенье по расписанию в 10.00. Продолжительность экскурсии - 5 часов.
+            <br />
+            <br />
+            <span style="text-decoration: underline;">Забронируйте себе место на теплоходе прямо сейчас! Без очередей, по лучшей цене, с гарантированным местом!</span>
+            <br />
+            <br />
+            <br />
+            <a href="#meteors">Все экскурсии на метеоре.</a>
+          </p>
+        </div>
+        <hr class="short"/>
+        <h3 class="h4">Карта маршрута</h3>
+
+        <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=q9TRJ_uRcmVzfAAYjn6hd2Ol9AemdYlz&width=auto&height=450"></script>
+
+        <div class="divider"></div>
+
+        <div class="well">
+          <h3 class="h4">Совет от организатора</h3>
+          <div class="lead">Возьмите с собой не продуваемую куртку, ведь Вам обязательно захочется выйти на открытую палубу метеора.</div>
+        </div>
+
+        <!-- Put this script tag to the <head> of your page -->
+        <script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+
+        <script type="text/javascript">
+          VK.init({apiId: 4894747, onlyWidgets: true});
+        </script>
+
+        <!-- Put this div tag to the place, where the Comments block will be -->
+        <div id="vk_comments"></div>
+        <script type="text/javascript">
+          VK.Widgets.Comments("vk_comments", {limit: 10, width: "auto", attach: "*"}, 16);
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <p class="lead text-center">
+    <a href="/">Посмотреть все водные экскурсии по Санкт-Петербургу &rarr;</a>
+  </p>
+
+  <!-- @include ./components/footer.html -->
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- @include ./components/_scripts/vendor.html -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/plugins.js -->
+  <!-- @include ./components/_scripts/plugins.html -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+
+  <!-- @include ./components/counters/Yandex.Metrika.html -->
+  <!-- @include ./components/counters/Google.Analytics.html -->
+  <!-- @include ./components/counters/Mail.Counter.html -->
+</body>
+</html>

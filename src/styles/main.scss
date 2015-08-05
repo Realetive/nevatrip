@@ -84,6 +84,8 @@ $topbar-toggle-border-color:     #ddd;
 
 $nav-link-padding:               5px 10px;
 
+$jumbotron-heading-font-size:    42px;
+
 $state-success-bg:               #dff0d8;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%);
 $state-info-text:                $brand-primary;
@@ -206,11 +208,23 @@ $img-bg-url:                     '../img/bg.jpg';
   }
 }
 
+.nav-link__subtitle {
+  display: none;
+
+  @media (min-width: $screen-sm-min) {
+    display: block;
+  }
+}
+
+.affix .nav-link__subtitle {
+  display: none;
+}
+
 .navbar-nav.nav-justified > li {
   float: none;
 
-  @media (min-width: 768px) {
-    &:before {
+  @media (min-width: $screen-sm-min) {
+    &::before {
       content: '';
       background: #e7e7e7;
       width: 1px;
@@ -235,10 +249,6 @@ $img-bg-url:                     '../img/bg.jpg';
  */
 
 @import "components/topbar";
-
-.footer{
-  padding: ($footer-padding * 3) 0;
-}
 
 .navbar.affix{
   top: 0;
@@ -415,8 +425,8 @@ div.divider {
 
   &:after {
     display: block;
-    background-color: #edeceb;
-    height: .08em;
+    background-color: $gray-lighter;
+    height: 1px;
     margin: 0 25% 20px;
     position: relative;
     top: 15px;
@@ -468,7 +478,31 @@ div.divider {
   @extend .btn-link;
   @extend .btn-lg;
   white-space: normal;
+}
 
-  @media (min-width: $screen-sm-min) {
-  } 
+.trip__header {
+  padding: 120px 0 140px;
+
+  .alpha-bg {
+    padding: 30px 35px;
+  }
+}
+
+.footer {
+  border-top: 1px solid $gray-lighter;
+  margin-top: 20px;
+}
+
+.footer__contacts {
+  padding: ($footer-padding * 2) 0;
+  margin-top: 20px;
+  font-size: 23px;
+  text-align: center;
+}
+
+.footer__disclaimer {
+  font-size: .85em;
+  border-top: 1px solid $gray-lighter;
+  padding: ($footer-padding * 2) 0;
+  margin-top: 20px;
 }
