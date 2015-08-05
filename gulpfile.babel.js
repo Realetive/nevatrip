@@ -154,11 +154,15 @@ gulp.task( 'clean', del.bind( null, [ '.tmp', 'dist' ] ) );
 
 gulp.task( 'serve', [ 'styles', 'fonts' ], () => {
   browserSync( {
-    notify: false,
-    port: 9000,
-    server: {
-      baseDir: [ '.tmp', 'src' ],
-      routes: {
+    notify    : false,
+    port      : 9000,
+    ghostMode : false,
+    // open      : 'tunnel',
+    // tunnel    : 'nevatripdev',
+    browser   : 'google chrome canary',
+    server    : {
+      baseDir : [ '.tmp', 'src' ],
+      routes  : {
         '/bower_components': 'bower_components'
       }
     }
@@ -179,9 +183,12 @@ gulp.task( 'serve', [ 'styles', 'fonts' ], () => {
 
 gulp.task( 'serve:dist', () => {
   browserSync( {
-    notify : false,
-    port   : 9000,
-    server : {
+    notify    : false,
+    port      : 9001,
+    ghostMode : false,
+    open      : 'tunnel',
+    tunnel    : 'nevatrip',
+    server    : {
       baseDir : [ 'dist' ],
       middleware: [compress()]
     }
@@ -191,7 +198,7 @@ gulp.task( 'serve:dist', () => {
 gulp.task( 'serve:test', () => {
   browserSync( {
     notify: false,
-    port: 9000,
+    port: 9003,
     ui: false,
     server: {
       baseDir: 'test',
