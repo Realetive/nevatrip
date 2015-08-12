@@ -33,7 +33,9 @@
     "htmlLanguage": "ru",
     "developerName": "Roman aka Realetive Ganin",
     "developerEmail": "realetive@gmail.com",
-    "developerUrl": "https://github.com/Realetive"
+    "developerUrl": "https://github.com/Realetive",
+    "brandColor": "#ffffff",
+    "faviconPath": "src/favicon.png"
   },
   "devDependencies": {
     "babel-core": "^5.5.6",

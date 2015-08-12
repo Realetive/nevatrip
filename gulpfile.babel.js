@@ -88,13 +88,18 @@ gulp.task( 'images', () => {
  * https://github.com/haydenbleasel/gulp-favicons
  */
 gulp.task( 'favicons', () => {
-  return gulp.src( 'src/_templates/components/favicons.html' )
+  del( [ 'src/images/favicons' ] );
+  require( 'fs' ).writeFile( 'src/_templates/components/_head/favicons.html', '', function( err ) {
+    if ( err ) throw err;
+    console.log( 'favicons cleared' ) ;
+  } );
+  return gulp.src( packageJson.config.faviconPath )
     .pipe( $.favicons(
       {
         files: {
-          src              : 'src/favicon.png'
-        , dest             : '../../images/favicons'
-        , html             : 'src/_templates/components/favicons.html'
+          src              : packageJson.config.faviconPath
+        , dest             : 'images/favicons'
+        , html             : 'src/_templates/components/_head/favicons.html'
         , iconsPath        : 'images/favicons'
         , androidManifest  : 'images/favicons'
         , browserConfig    : 'images/favicons'
@@ -118,18 +123,12 @@ gulp.task( 'favicons', () => {
         , developer        : packageJson.config.developerName
         , developerURL     : packageJson.config.developerUrl
         , version          : packageJson.version
-        , background       : '#ffffff'
+        , background       : packageJson.config.brandColor
         , index            : 'index.html'
         , url              : packageJson.homepage
         , silhouette       : true
         , logging          : false
         }
-      } ) )
-    .pipe( $.size(
-      {
-        gzip      : false
-      , showFiles : false
-      , title     : 'Favicons'
       } ) );
 });
 
