@@ -261,6 +261,10 @@ $img-bg-url:                     '../img/bg.jpg';
       }
     }
   }
+
+  &.active > a::after {
+    background-color: $navbar-inverse-link-hover-bg;
+  }
 }
 
 /*!
