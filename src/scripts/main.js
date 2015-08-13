@@ -1,1 +1,3 @@
-console.log('\'Allo \'Allo!');
+'use strict';
+
+$( '[data-toggle="tooltip"]' ).tooltip();
