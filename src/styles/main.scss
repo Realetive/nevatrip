@@ -106,80 +106,8 @@ $img-bg-url:                     '../img/bg.jpg';
 
 
 // bower:scss
-
-/*!
- * Bootstrap v3.3.5
- */
-
-// Core variables and mixins
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-
-// Reset and dependencies
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/print";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
-
-// Core CSS
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/type";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/code";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/grid";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/forms";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
-
-// Components
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navs";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/pagination";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/pager";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/labels";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/badges";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/alerts";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/media";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/list-group";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/panels";
-// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/wells";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/close";
-
-// Components w/ JavaScript
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/modals";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
-
-// Utility classes
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
-
-
-/*!
- * Font Awesome 4.3.0
- */
-
-@import "bower_components/font-awesome/scss/variables";
-@import "bower_components/font-awesome/scss/mixins";
-@import "bower_components/font-awesome/scss/path";
-@import "bower_components/font-awesome/scss/core";
-@import "bower_components/font-awesome/scss/larger";
-@import "bower_components/font-awesome/scss/fixed-width";
-@import "bower_components/font-awesome/scss/list";
-@import "bower_components/font-awesome/scss/bordered-pulled";
-// @import "bower_components/font-awesome/scss/animated";
-@import "bower_components/font-awesome/scss/rotated-flipped";
-@import "bower_components/font-awesome/scss/stacked";
-@import "bower_components/font-awesome/scss/icons";
-
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
 /*!
@@ -532,4 +460,12 @@ div.divider {
   border-top: 1px solid $gray-lighter;
   padding: ($footer-padding * 2) 0;
   margin-top: 20px;
+}
+
+.payment-item {
+  font-size: 1.1em;
+
+  & &__radio {
+    margin-top: 3px;
+  }
 }
