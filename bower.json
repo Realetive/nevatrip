@@ -5,7 +5,8 @@
     "bootstrap-sass": "~3.3.5",
     "font-awesome": "~4.4.0",
     "bootstrap-datepicker": "https://github.com/eternicode/bootstrap-datepicker.git#~1.4.0",
-    "blueimp-gallery": "~2.15.4"
+    "blueimp-gallery": "~2.15.4",
+    "simpleWeather": "~3.0.2"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -20,6 +21,17 @@
         "scss/font-awesome.scss",
         "fonts/*"
       ]
+    },
+    "bootstrap-datepicker": {
+      "main": [
+        "dist/css/bootstrap-datepicker.css",
+        "dist/css/bootstrap-datepicker3.css",
+        "js/bootstrap-datepicker.js",
+        "js/locales/bootstrap-datepicker.ru.js"
+      ],
+      "dependencies": {
+        "jquery" : ">=1.7.1"
+      }
     }
   },
   "devDependencies": {
