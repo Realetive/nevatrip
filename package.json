@@ -73,10 +73,7 @@
       "browser": true
     },
     "rules": {
-      "quotes": [
-        2,
-        "single"
-      ]
+      "quotes": [ 2, "single" ]
     }
   }
 }
