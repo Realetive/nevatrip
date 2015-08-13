@@ -88,10 +88,9 @@ gulp.task( 'images', () => {
  * https://github.com/haydenbleasel/gulp-favicons
  */
 gulp.task( 'favicons', () => {
-  del( [ 'src/images/favicons' ] );
+  del.sync( [ 'src/images/favicons/**' ] );
   require( 'fs' ).writeFile( 'src/_templates/components/_head/favicons.html', '', function( err ) {
     if ( err ) throw err;
-    console.log( 'favicons cleared' ) ;
   } );
   return gulp.src( packageJson.config.faviconPath )
     .pipe( $.favicons(
@@ -129,6 +128,11 @@ gulp.task( 'favicons', () => {
         , silhouette       : true
         , logging          : false
         }
+      }, function ( error, metadata ) {
+          if ( error ) {
+              throw error;
+          }
+          console.log( metadata, 'Metadata produced during the build process' );
       } ) );
 });
 
@@ -227,7 +231,7 @@ gulp.task( 'wiredep', () => {
     .pipe( gulp.dest( 'src/_templates/' ) );
 });
 
-gulp.task( 'build', [ 'lint', 'html', 'images', 'favicons', 'fonts', 'extras' ], () => {
+gulp.task( 'build', [ 'favicons', 'lint', 'html', 'images', 'fonts', 'extras' ], () => {
   return gulp.src( 'dist/**/*' )
     .pipe( $.size( { title: 'build', gzip: true } ) );
 });
