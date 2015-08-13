@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "font-awesome": "~4.3.0",
+    "font-awesome": "~4.4.0",
     "bootstrap-datepicker": "https://github.com/eternicode/bootstrap-datepicker.git#~1.4.0",
     "blueimp-gallery": "~2.15.4"
   },
