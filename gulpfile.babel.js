@@ -30,7 +30,7 @@ function lint( files, options ) {
  * https://github.com/jas/gulp-preprocess
  */
 gulp.task( 'templates', () => {
-  return gulp.src( 'src/_templates/*.html' )
+  return gulp.src( ['src/_templates/**/*.html', '!src/_templates/components/**/*'] )
     .pipe( $.preprocess( { context: packageJson } ) )
     .pipe( gulp.dest( 'src' ) );
 });
