@@ -50,16 +50,14 @@
                     <input type="text" name="trip_date" class="form-control" id="trip_date" placeholder="дд.мм.гггг" required maxlength="10">
                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                   </div>
-                  <span class="help-block">Отличный выбор! В этот день, если верить <a href="//pogoda.yandex.ru/saint-petersburg/" rel="nofollow" target="_blank" title="Мы используем сервис Яндекс для прогнозирования погоды на ближайшие 10 дней">Яндекс.Погоде</a>, в Питере будет <b>переменная облачность</b>, <b>+19</b>&nbsp;°C, ветер <b>6,2</b>&nbsp;м/c</span>
+                  <span class="help-block">Отличный выбор! В этот день, если верить <a href="//pogoda.yandex.ru/saint-petersburg/" rel="nofollow" target="_blank" title="Мы используем сервис Яндекс для прогнозирования погоды на ближайшие 10 дней">Яндекс.Погоде</a>, в Питере будет <b>переменная облачность</b>, <b>+19</b>&nbsp;°C, ветер <b>6,2</b>&nbsp;м/c.</span>
                 </div>
-
                 <div class="form-group">
                   <label for="trip_time">Время отправления</label>
                   <select name="trip_time" class="form-control" id="trip_time">
                     <option value="01:15">01:15</option>
                   </select>
                 </div>
-
                 <div class="form-group">
                   <label for="BuyFormTripPoints">Выберите направление</label>
                   <select name="trip_points" id="BuyFormTripPoints" class="form-control">
@@ -68,10 +66,27 @@
                     <option value="СПб-Петергоф &mdash; Петергоф-СПб">СПб-Петергоф &mdash; Петергоф-СПб</option>
                   </select>
                 </div>
-
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="order_email">E-mail</label>
+                  <input type="email" name="cps_email" class="form-control" required maxlength="100">
+                  <span class="help-block">Пожалуйста, убедитесь в правильности введенного адреса — после успешной оплаты билет будет выслан на указанный email.</span>
+                </div>
+                <div class="form-group">
+                  <label for="order_fullname">Фамилия и имя</label>
+                  <input type="text" name="fullname" class="form-control" maxlength="255">
+                </div>
+                <div class="form-group">
+                  <label for="order_phone">Номер мобильного телефона</label>
+                  <input type="tel" pattern="(\+?\d[- .]*){11,13}" placeholder="В формате +79ХХХХХХХХХ" name="cps_phone" class="form-control" required maxlength="15">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
                 <fieldset class="form-group" id="BuyFormMainTickets">
                   <legend>Билеты</legend>
-
                   <div class="row">
                     <div class="col-sm-7">
                       <label class="h5">
@@ -90,7 +105,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div class="row">
                     <div class="col-sm-7">
                       <label class="h5">
@@ -110,7 +124,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div class="row">
                     <div class="col-sm-7">
                       <label class="h5">
@@ -131,27 +144,8 @@
                     </div>
                   </div>
                 </fieldset>
-
-                <script>
-                  var ticketPriceDouble = '1150,900,550';
-                </script>
-
               </div>
               <div class="col-sm-6">
-                <div class="form-group">
-                  <label for="order_email">E-mail</label>
-                  <input type="email" name="cps_email" class="form-control" required maxlength="100">
-                  <span class="help-block">Пожалуйста, убедитесь в правильности введенного адреса — после успешной оплаты билет будет выслан на указанный email</span>
-                </div>
-                <div class="form-group">
-                  <label for="order_fullname">Фамилия и имя</label>
-                  <input type="text" name="fullname" class="form-control" maxlength="255">
-                </div>
-                <div class="form-group">
-                  <label for="order_phone">Номер мобильного телефона</label>
-                  <input type="tel" pattern="(\+?\d[- .]*){11,13}" placeholder="В формате +79ХХХХХХХХХ" name="cps_phone" class="form-control" required maxlength="15">
-                </div>
-
                 <fieldset class="form-group">
                   <legend for="order_phone">Вариант оплаты</legend>
                   <div class="radio">
@@ -181,9 +175,6 @@
                   <label for="order_phone">Промокод (если есть)</label>
                   <input type="text" id="BuyFormPromocode" name="promocode" class="form-control" maxlength="255">
                 </div>
-                <script>
-                  var p = {"маха":"100","твой друг":"10","байк":"2","байк2":"2","династия":"2","гамак":"2","рэди":"2","байк":"2","байк2":"2","династия":"2","гамак":"2","рэди":"2","спасибо":"5","спасибо":"5","династия":"2"};
-                </script>
 
                 <div class="form-group" id="BuyFormTotal" style="display: none;">
                   <span class="h4">Итого к оплате:</span>
@@ -200,7 +191,10 @@
               </div>
             </div>
           </form>
-
+          <script>
+            var p = {"маха":"100","твой друг":"10","байк":"2","байк2":"2","династия":"2","гамак":"2","рэди":"2","байк":"2","байк2":"2","династия":"2","гамак":"2","рэди":"2","спасибо":"5","спасибо":"5","династия":"2"};
+            var ticketPriceDouble = '1150,900,550';
+          </script>
           <div class="row">
             <div class="col-sm-6">
               <div class="panel panel-success">
