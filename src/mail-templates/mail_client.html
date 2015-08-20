@@ -9,29 +9,44 @@
 </head>
 <body>
 
-  <table cellpadding="0" cellspacing="0" border="0">
+  <table cellpadding="0" cellspacing="0" border="0" align="center">
     <tr>
       <td>
-
-      <!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and in most cases reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. -->
-      <table cellpadding="0" cellspacing="0" border="1" align="center">
-        <tr>
-          <td width="200" valign="top"></td>
-          <td width="200" valign="top"></td>
-          <td width="200" valign="top"></td>
-        </tr>
-      </table>
-
-      <!-- End example table -->
-
-      <!-- Yahoo Link color fix updated: Simply bring your link styling inline. -->
-      <a href="http://htmlemailboilerplate.com" target ="_blank" title="Styling Links" style="color: orange; text-decoration: none;">Coloring Links appropriately</a>
-
-      <!-- Gmail/Hotmail image display fix: Gmail and Hotmail unwantedly adds in an extra space below images when using non IE browsers.  This can be especially painful when you putting images on top of each other or putting back together an image you spliced for formatting reasons.  Either way, you can add the 'image_fix' class to remove that space below the image.  Make sure to set alignment (don't use float) on your images if you are placing them inline with text.-->
-      <img class="image_fix" src="full path to image" alt="Your alt text" title="Your title text" width="x" height="x" />
-
-      <!-- Step 2: Working with telephone numbers (including sms prompts).  Use the "mobile_link" class with a span tag to control what number links and what doesn't in mobile clients. -->
-      <span class="mobile_link">123-456-7890</span>
+        <table cellpadding="0" cellspacing="0" border="1" align="center" style="border-width: 1px; border-style: solid; border-color: #dadada; font-family: Arial, sans-serif;">
+          <tr>
+            <td width="40" rowspan="3"></td>
+            <td></td>
+            <td></td>
+            <td width="40" rowspan="3"></td>
+          </tr>
+          <tr>
+            <td  width="260">
+              <a href="http://nevatrip.ru" style="color:#000000;font-size:16px;text-decoration:none;display:block" target="_blank">
+                <img src="http://nevatrip.ru/assets/img/nevatrip_logo_h.png" alt="NevaTrip" title="NevaTrip" width="188" height="40" style="display:block;border:0" class="CToWUd">
+              </a>
+            </td>
+            <td  width="260" align="right">
+              <a href="http://nevatrip.ru/print?id=75100&code=2894174919971" target ="_blank" title="Распечатать билет" style="color: orange; text-decoration: none;">Распечатать билет</a>
+            </td>
+          </tr>
+          <tr>
+            <td width="520" colspan="2">
+              <h1 style="color: #000000; font-size: 27px; font-weight: bold; line-height: 34px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 20px; margin-top: 20px; margin-left: 0; margin-right: 0;">
+                Спасибо за покупку!
+              </h1>
+              <p style="color: #000000; font-size: 20px; font-weight: normal; line-height: 24px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin: 0">
+                Ваш посадочный билет: № <strong>НТ[[+code]]</strong>
+              </p>
+              <p style="color: #000000; font-size: 13px; font-weight: normal; line-height: 18px;">
+                Билет распечатывать не обязательно, просто сообщите код кассиру и получите входной билет.
+                Если у вас будет с собой распечатанный билет, то вы можете пройти по нему на теплоход.
+              </p>
+              <p style="color: #000000; font-size: 13px; font-weight: normal; line-height: 18px;">
+                Вам необходимо подойти <b>за 15 минут</b> до отправления рейса.
+              </p>
+            </td>
+          </tr>
+        </table>
 
       </td>
     </tr>
