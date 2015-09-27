@@ -125,7 +125,7 @@ $img-bg-url:                     '../img/bg.jpg';
 
 .navbar {
   border-width: 0;
-  position: absolute;
+  position: static;
   top: 65px;
   left: 0;
   right: 0;
@@ -469,3 +469,6 @@ div.divider {
     margin-top: 3px;
   }
 }
+
+@import "components/links";
+@import "components/helpers";
