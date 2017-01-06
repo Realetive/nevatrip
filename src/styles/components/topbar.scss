@@ -1,35 +1,53 @@
-/*!
- * Topbars
- *
- * Wrapper and base class
- * Provide a static topbar from which we expand to create full-width, fixed, and
- * other topbar variations.
- */
-
 .topbar {
   position: relative;
-  height: $topbar-height; // Ensure a topbar always shows (e.g., without a .topbar-brand in collapsed mode)
+  height: $topbar-height;
   background-color: $topbar-bg;
-  overflow: hidden;
   margin-bottom: $topbar-margin-bottom;
 
   @media (min-width: $screen-sm-min) {
-    margin-bottom: $topbar-margin-bottom-sm;    
+    margin-bottom: $topbar-margin-bottom-sm;
   }
 
-  // Prevent floats from breaking the topbar
   @include clearfix();
 }
-
-// Brand/project name
 
 .topbar-brand,
 .topbar-slogan {
   float: left;
-  padding: $topbar-padding-vertical $topbar-padding-horizontal;
   font-size: $font-size-large;
+  padding: $topbar-padding-vertical 0;
   color: $topbar-brand-color;
   margin: 0;
+}
+
+.topbar-brand {
+  width: 220px;
+  padding: 10px 0;
+  
+  @media (min-width: $screen-sm-min) {
+    width: 130px;
+    padding: 20px 0;
+  }
+
+  &__link {
+    display: block;
+  }
+  
+  &__logo {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+.topbar-slogan {
+  display: none;
+  padding-left: $topbar-padding-horizontal;
+  padding-right: $topbar-padding-horizontal;
+
+  @media (min-width: $screen-sm-min) {
+    display: block;
+  }
+
 }
 
 .topbar-slogan{
@@ -37,10 +55,34 @@
 }
 
 .topbar-text{
-  padding: $topbar-padding-vertical $topbar-padding-horizontal;
+  padding: $topbar-padding-vertical 0;
+  float: right;
+}
+
+.topbar-text__contacts,
+.topbar-text__lang {
+  float: left;
+}
+
+.topbar-text__contacts {
+  display: none;
+
+  @media (min-width: $screen-sm-min) {
+    display: block;
+  }
 }
 
 .topbar__phone {
   display: block;
   @extend .lead;
+}
+
+.topbar-text__lang {
+  margin-left: 1em;
+}
+
+#nevatrip-logo g.subtitle {
+  @media (min-width: $screen-sm-min) {
+    display: none;
+  }
 }

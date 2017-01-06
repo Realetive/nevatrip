@@ -1,9 +1,13 @@
+'use strict';
+
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
 import compress from 'compression';
+
+import ftp from 'vinyl-ftp';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -54,14 +58,11 @@ gulp.task( 'lint', lint( 'src/scripts/**/*.js' ) );
 gulp.task( 'lint:test', lint( 'test/spec/**/*.js', testLintOptions ) );
 
 gulp.task( 'html', [ 'styles' ], () => {
-  const assets = $.useref.assets( { searchPath: [ '.tmp', 'src', '.' ] });
-
+  
   return gulp.src( 'src/*.html' )
-    .pipe( assets )
+    .pipe($.useref({searchPath: ['.tmp', 'src', '.']}))
     .pipe( $.if( '*.js', $.uglify() ) )
     .pipe( $.if( '*.css', $.minifyCss( {compatibility: '*'} ) ) )
-    .pipe( assets.restore() )
-    .pipe( $.useref() )
     .pipe( $.if( '*.html', $.minifyHtml( { conditionals: true, loose: true } ) ) )
     .pipe( gulp.dest( 'dist' ) );
 });
@@ -136,6 +137,42 @@ gulp.task( 'favicons', () => {
       } ) );
 });
 
+gulp.task('sftp', function () {
+  return gulp.src('dist/styles/*')
+    .pipe( $.plumber() )
+    .pipe( $.sftp( {
+      host       : 'p299682.ftp.ihc.ru',
+      user       : 'p299682_ganin',
+      pass       : 'TvSCbqpmg2',
+      port       : 21,
+      remotePath : '/home/p299682/www/nevatrip.dev/src/styles/'
+    } ) );
+});
+
+gulp.task('ftp', function () {
+
+  var conn = ftp.create( {
+    host:     'p299682.ftp.ihc.ru',
+    user:     'p299682_ganin',
+    password: 'TvSCbqpmg2',
+    parallel: 10
+  } );
+ 
+  var globs = [
+    'dist/styles/**',
+    'dist/scripts/**'
+  ];
+ 
+  // using base = '.' will transfer everything to /public_html correctly 
+  // turn off buffering in gulp.src for best performance 
+ 
+  return gulp.src( globs, { base: '.', buffer: false } )
+    .pipe( $.plumber() )
+    .pipe( conn.newer( '/www/nevatrip.dev/src' ) )
+    .pipe( conn.dest( '/www/nevatrip.dev/src' ) );
+
+});
+
 gulp.task( 'fonts', () => {
   return gulp.src( require( 'main-bower-files' )( {
     filter: '**/*.{eot,svg,ttf,woff,woff2}'
@@ -162,7 +199,6 @@ gulp.task( 'serve', [ 'styles', 'fonts' ], () => {
     ghostMode : false,
     // open      : 'tunnel',
     // tunnel    : 'nevatripdev',
-    browser   : 'google chrome canary',
     server    : {
       baseDir : [ '.tmp', 'src' ],
       routes  : {
@@ -223,7 +259,9 @@ gulp.task( 'wiredep', () => {
     } ) )
     .pipe( gulp.dest( 'src/styles' ) );
 
+  console.log('heh');
   gulp.src( 'src/_templates/**/*.html' )
+    .pipe( $.plumber() )
     .pipe( wiredep( {
       exclude: [ 'bootstrap-sass' ],
       ignorePath: /^(\.\.\/)*\.\./
@@ -231,7 +269,7 @@ gulp.task( 'wiredep', () => {
     .pipe( gulp.dest( 'src/_templates/' ) );
 });
 
-gulp.task( 'build', [ 'favicons', 'lint', 'html', 'images', 'fonts', 'extras' ], () => {
+gulp.task( 'build', [ 'lint', 'html', 'images', 'fonts', 'extras' ], () => {
   return gulp.src( 'dist/**/*' )
     .pipe( $.size( { title: 'build', gzip: true } ) );
 });

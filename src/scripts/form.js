@@ -63,7 +63,7 @@ if ( $Form != null ) {
 
         sum = parseInt((sum * (100 - discount)) / 100);
 
-        $( $Form).trigger('updateSum');
+        $($Form).trigger('updateSum');
         checkCount();
       };
 

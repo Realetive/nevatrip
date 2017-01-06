@@ -1,26 +1,33 @@
-/* eslint new-cap: [ 1, { capIsNewExceptions: [ "Gallery" ] } ] */
-/* global $, blueimp */
+/* global $, moment, inputmask */
+
 'use strict';
 
 $( '[data-toggle="tooltip"]' ).tooltip();
 $( '[data-toggle="popover"]' ).popover();
 
-$('.input-group.date').datepicker({
-  weekStart: 1,
-  language: 'ru',
-  keyboardNavigation: false,
-  todayHighlight: false,
-  autoclose: true
-});
+function currentDate() {
+  return Date('now');
+}
 
-var galleryContainer = document.getElementById( 'gallery' );
-if ( galleryContainer != null ) {
-  galleryContainer.onclick = function ( event ) {
-    event = event || window.event;
-    var target = event.target || event.srcElement,
-    link = target.src ? target.parentNode : target,
-    options = { index: link, event: event },
-    links = this.getElementsByTagName( 'a' );
-    blueimp.Gallery( links, options );
-  };
+var tripDate = $('.datetimepicker');
+if (tripDate.length !== 0) {
+  $('.datetimepicker__field').attr('type', 'hidden');
+  $('.datetimepicker__icon').hide();
+
+  $('.datetimepicker__field').datetimepicker({
+    format: 'DD.MM.YYYY',
+    minDate: currentDate(),
+    defaultDate: currentDate(),
+    useStrict: true,
+    keepOpen: true,
+    inline: true,
+    sideBySide: true,
+    allowInputToggle: true,
+    locale: moment.locale('ru'),
+  });
+}
+
+var phoneInput = $('[name="phone"]');
+if (phoneInput.length !== 0) {
+  phoneInput.inputmask({ mask: '+7 999 999-99-99', greedy: false });
 }

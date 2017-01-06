@@ -1,0 +1,7 @@
+.payment-item {
+  @extend .btn;
+  @extend .btn-default;
+  padding: 1em;
+  white-space: normal;
+  vertical-align: top;
+}

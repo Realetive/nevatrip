@@ -60,7 +60,7 @@ $navbar-padding-horizontal:      0;
 
 $topbar-height:                  65px;
 $topbar-margin-bottom:           36px;
-$topbar-margin-bottom-sm:        53px;
+$topbar-margin-bottom-sm:        36px;
 $topbar-border-radius:           $border-radius-base;
 $topbar-padding-horizontal:      15px;
 $topbar-padding-vertical:        12px;
@@ -104,10 +104,15 @@ $footer-padding:                 $padding-large-vertical;
 
 $img-bg-url:                     '../img/bg.jpg';
 
+$thumbnail-border: transparent;
+
+$flag-icon-css-path: '../images/flags';
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/font-awesome/scss/font-awesome.scss";
+@import "bower_components/eonasdan-bootstrap-datetimepicker/src/sass/bootstrap-datetimepicker-build.scss";
+@import "bower_components/flag-icon-css/sass/flag-icon.scss";
 // endbower
 
 /*!
@@ -125,7 +130,7 @@ $img-bg-url:                     '../img/bg.jpg';
 
 .navbar {
   border-width: 0;
-  position: static;
+  position: absolute;
   top: 65px;
   left: 0;
   right: 0;
@@ -200,6 +205,16 @@ $img-bg-url:                     '../img/bg.jpg';
  */
 
 @import "components/topbar";
+@import "components/link";
+@import "components/button";
+@import "components/helpers";
+@import "components/footer";
+@import "components/datetimepicker";
+@import "components/fieldset";
+@import "components/mobile-action";
+@import "components/payment-item";
+@import "components/order";
+@import "components/menu-feedback";
 
 .navbar.affix{
   top: 0;
@@ -232,37 +247,6 @@ $img-bg-url:                     '../img/bg.jpg';
   font-size: 0.8em;
 }
 
-@font-face {
-  font-family: 'icomoon';
-  src:url('../fonts/custom-icons/icomoon.eot?wsxrm2');
-  src:url('../fonts/custom-icons/icomoon.eot?#iefixwsxrm2') format('embedded-opentype'),
-  url('../fonts/custom-icons/icomoon.ttf?wsxrm2') format('truetype'),
-  url('../fonts/custom-icons/icomoon.woff?wsxrm2') format('woff'),
-  url('../fonts/custom-icons/icomoon.svg?wsxrm2#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-microphone:before {
-  content: "\e600";
-}
-.icon-wc:before {
-  content: "\e601";
-}
-
 hr.divider,
 div.divider {
   padding-bottom: $navbar-height;
@@ -287,11 +271,15 @@ div.divider {
   background-position: 50% 50%;
 
   @media (min-width: $screen-sm-min) {
-    padding: 50px 0 70px;
+    padding: 60px 0 80px;
   }
 
-  .alpha-bg {
-    display: inline-block;
+  @media (min-width: $screen-md-min) {
+    padding: 120px 0 140px;
+
+    &_promo {
+      padding: 60px 0 40px;
+    }
   }
 }
 
@@ -306,16 +294,11 @@ div.divider {
 
 .img-bg__feature-item {
   margin-bottom: 10px;
+  font-size: 16px;
 
   .lead {
     font-size: 21px;
   }
-}
-
-.alpha-bg {
-  background: rgba(255, 255, 255, .6);
-  padding: 10px 20px;
-  width: 100%;
 }
 
 .column-2 {
@@ -384,6 +367,14 @@ div.divider {
   }
 }
 
+.trip__thumb {
+  display: block;
+
+  @media (min-width: $screen-sm-min) {
+    margin-top: 21px;
+  }
+}
+
 .trip__action {
   @include clearfix();
   margin: 20px 0;
@@ -424,6 +415,10 @@ div.divider {
   } 
 }
 
+.trip__content {
+  line-height: 1.4;
+}
+
 .trip__info {
   @extend .btn;
   @extend .btn-link;
@@ -431,35 +426,30 @@ div.divider {
   white-space: normal;
 }
 
-.trip__header {
-  padding: 120px 0 140px;
+.alpha-bg {
+  background: rgba(255, 255, 255, .6);
+  padding: 10px 20px;
+  width: 100%;
 
-  .alpha-bg {
-    padding: 30px 35px;
+  padding: 30px 35px;
+  font-size: 34px;
+
+  @media (min-width: $screen-md-min) {
+    display: inline-block;
+    font-size: 45px;    
+  }
+}
+
+.trip__header {
+  padding: 20px 0 40px;
+
+  @media (min-width: $screen-sm-min) {
+    padding: 120px 0 140px;
   }
 }
 
 .trip-feature__item {
-  line-height: 1.8;
-}
-
-.footer {
-  border-top: 1px solid $gray-lighter;
-  margin-top: 20px;
-}
-
-.footer__contacts {
-  padding: ($footer-padding * 2) 0;
-  margin-top: 20px;
-  font-size: 23px;
-  text-align: center;
-}
-
-.footer__disclaimer {
-  font-size: .85em;
-  border-top: 1px solid $gray-lighter;
-  padding: ($footer-padding * 2) 0;
-  margin-top: 20px;
+  line-height: 2;
 }
 
 .payment-item {
@@ -469,6 +459,3 @@ div.divider {
     margin-top: 3px;
   }
 }
-
-@import "components/links";
-@import "components/helpers";

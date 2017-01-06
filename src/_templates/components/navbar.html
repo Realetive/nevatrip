@@ -1,4 +1,4 @@
-<div class="navbar navbar-inverse" id="NavScrollSpy" data-spy="affix" data-offset-top="83">
+<div class="navbar navbar-inverse navbar-menu" id="NavScrollSpy" data-spy="affix" data-offset-top="65">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
@@ -7,8 +7,55 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <button type="button" class="navbar-toggle collapsed menu-feedback__btn" data-toggle="collapse" data-target="#menu-feedback">Связаться с нами</button>
     </div>
-    <div class="collapse navbar-collapse" id="menu">
+    <div class="menu-feedback collapse" id="menu-feedback">
+      <div class="menu-feedback__action-list">
+        <div class="col-xs-6 menu-feedback__action menu-feedback__action_phone">
+          <a href="tel:<!-- @echo config.phoneCode -->" class="menu-feedback__link">
+            <i class="fa fa-fw fa-3x fa-phone"></i>
+            <div class="menu-feedback__title">Позвонить/SMS</div>
+          </a>
+        </div>
+        <div class="col-xs-6 menu-feedback__action menu-feedback__action_viber">
+          <a href="viber://nevatrip" class="menu-feedback__link">
+            <i class="fa fa-fw fa-3x fa-comment"></i>
+            <div class="menu-feedback__title">Viber</div>
+          </a>
+        </div>
+        <div class="col-xs-6 menu-feedback__action menu-feedback__action_whatsapp">
+          <a href="whatsapp://send?text=Hello%2C%20World!" class="menu-feedback__link">
+            <i class="fa fa-fw fa-3x fa-whatsapp"></i>
+            <div class="menu-feedback__title">WhatsApp</div>
+          </a>
+        </div>
+        <div class="col-xs-6 menu-feedback__action menu-feedback__action_telegram">
+          <a href="//telegram.me/Nevatrip" class="menu-feedback__link" target="_blank">
+            <i class="fa fa-fw fa-3x fa-paper-plane"></i>
+            <div class="menu-feedback__title">Telegram</div>
+          </a>
+        </div>
+      </div>
+      <div class="menu-feedback__form">
+        <form action="" class="col-xs-12">
+          <h3 class="h2 text-center">… или написать</h3 class="h2">
+          <div class="form-group">
+            <label for="username">Как к вам обращаться?</label>
+            <input type="text" class="form-control" id="username" placeholder="Имя">
+          </div>
+          <div class="form-group">
+            <label for="feedback">Куда отправить ответ?</label>
+            <input type="text" class="form-control" id="feedback" placeholder="Email или телефон">
+          </div>
+          <div class="form-group">
+            <label for="message">Вопрос или предложение</label>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-block btn-lg menu-feedback__submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div class="navbar-collapse collapse" id="menu">
       <ul class="nav navbar-nav nav-justified">
         <li>
           <a href="#day">

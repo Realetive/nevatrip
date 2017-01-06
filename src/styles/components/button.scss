@@ -1,0 +1,23 @@
+.btn {
+
+  &_phone {
+    @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+    border-radius: 0;
+  }
+
+  &_viber {
+    @include button-variant(#d0d2d3, #783cbd, transparent);
+  }
+
+  &_whatsapp {
+    @include button-variant($btn-success-color, #43d854, transparent);
+  }
+
+  &_telegram {
+    @include button-variant($btn-success-color, #0088cc, transparent);
+  }
+
+  &_buy {
+    margin: 1.2em 0;
+  }
+}

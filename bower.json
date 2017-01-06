@@ -1,11 +1,14 @@
 {
-  "name": "init",
+  "name": "nevatrip",
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "font-awesome": "~4.4.0",
-    "bootstrap-datepicker": "https://github.com/eternicode/bootstrap-datepicker.git#~1.4.0",
-    "blueimp-gallery": "~2.15.4"
+    "moment": "^2.12.0",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.37",
+    "photoswipe": "^4.1.1",
+    "jquery.inputmask": "^3.3.0",
+    "flag-icon-css": "^2.0.0"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -21,16 +24,28 @@
         "fonts/*"
       ]
     },
-    "bootstrap-datepicker": {
+    "moment": {
       "main": [
-        "dist/css/bootstrap-datepicker.css",
-        "dist/css/bootstrap-datepicker3.css",
-        "js/bootstrap-datepicker.js",
-        "js/locales/bootstrap-datepicker.ru.js"
-      ],
-      "dependencies": {
-        "jquery": ">=1.7.1"
-      }
+        "moment.js",
+        "locale/ru.js"
+      ]
+    },
+    "eonasdan-bootstrap-datetimepicker": {
+      "main": [
+        "src/sass/bootstrap-datetimepicker-build.scss",
+        "src/js/bootstrap-datetimepicker.js"
+      ]
+    },
+    "jquery.inputmask": {
+      "main": [
+        "dist/inputmask/inputmask.js",
+        "dist/inputmask/jquery.inputmask.js"
+      ]
+    },
+    "flag-icon-css": {
+      "main": [
+        "sass/flag-icon.scss"
+      ]
     }
   },
   "devDependencies": {

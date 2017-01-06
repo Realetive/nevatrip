@@ -1,0 +1,72 @@
+.menu-feedback {
+  @extend .container-fluid;
+
+  overflow-y: auto;
+  // max-height: 350px;
+  height: 100vh;
+  padding-bottom: 43px;
+
+  &__btn {
+    float: left;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      color: darken($gray-lighter, 10%);
+    }
+  }
+
+  &__action-list {
+    @extend .row;
+  }
+  
+  &__action {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    &_phone {
+      border-right: 1px solid #444;
+      border-bottom: 1px solid #444;
+    }
+
+    &_viber {
+      border-left: 1px solid #555;
+      border-bottom: 1px solid #444;
+    }
+
+    &_whatsapp {
+      border-top: 1px solid #555;
+      border-right: 1px solid #444;
+    }
+
+    &_telegram {
+      border-top: 1px solid #555;
+      border-left: 1px solid #555;
+    }
+  }
+
+  &__link {
+    color: $gray-lighter;
+
+    &:hover,
+    &:focus {
+      color: $brand-warning;
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    margin-top: .5em;
+  }
+
+  &__form {
+    @extend .row;
+    background-color: #fff;
+    padding-bottom: 3em;
+  }
+
+  &__submit {
+    @extend .btn-warning;
+  }
+}

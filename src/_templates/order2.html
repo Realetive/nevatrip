@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="<!-- @echo config.htmlLanguage -->" itemscope itemtype="http://schema.org/LocalBusiness">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<!-- @echo description -->">
+  <title><!-- @echo config.projectTitle --></title>
+  <base href="/">
+
+  <!-- @include ./components/_head/meta.google.html -->
+  <!-- @include ./components/_head/meta.open-graph.html -->
+
+  <!-- build:css styles/vendor.css -->
+  <!-- @include ./components/_styles/vendor.html -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+  <!-- @include ./components/_head/favicons.html -->
+
+</head>
+<body data-spy="scroll" data-target="#NavScrollSpy">
+    <!--[if lt IE 10]>
+    <!-- @include ./components/browserupgrade.html -->
+    <![endif]-->
+    <noscript>
+      <!-- @include ./components/noscript.html -->
+    </noscript>
+
+    <!-- @include ./components/topbar.html -->
+    <!-- @include ./components/navbar.html -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h1>Купить билет онлайн</h1>
+          <h2 class="h4">Экскурсия
+            <a href="trip.html">«АКЦИЯ - Экскурсия под развод мостов на 2-палубном теплоходе»</a>
+          </h2>
+          
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="trip_date">Выберите дату рейса</label>
+                <div class="input-group datetimepicker">
+                  <input type="text" name="date" form="order"
+                         class="form-control datetimepicker__field"
+                         id="trip_date" placeholder="дд.мм.гггг" required maxlength="10"
+                         minlength="10" pattern="^[0-3][0-9]\.[0-1][0-2]\.201[6-7]$">
+                  <span class="input-group-addon datetimepicker__icon"><i class="fa fa-calendar"></i></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="trip_time">Время рейса</label>
+                <select name="time" class="form-control" id="trip_time" form="order" required>
+                  <option value="" selected disabled>Выберите время</option>
+                  <option value="01:15">01:15</option>
+                  <option value="03:15">03:15</option>
+                  <option value="07:15">07:15</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="direction">Направление</label>
+                <select name="direction" id="direction" class="form-control" form="order" required>
+                  <option value="" selected disabled>Выберите направление</option>
+                  <option value="СПб-Петергоф">СПб-Петергоф</option>
+                  <option value="Петергоф-СПб">Петергоф-СПб</option>
+                  <option value="СПб-Петергоф &mdash; Петергоф-СПб">СПб-Петергоф &mdash; Петергоф-СПб</option>
+                </select>
+              </div>
+              <fieldset>
+                <legend>Билеты</legend>
+                <div class="row">
+                  <div class="col-sm-7">
+                    <label class="h5">
+                      <span class="text-primary">
+                        Взрослый, 
+                        <span class="buy-form-ticket-price" data-ticket-price="770">770</span> <i class="fa fa-rub"></i>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="hidden" name="tickets[ticket_1_adult][price]" value="770" class="form-control text-center buy-form-ticket-input" data-ticket-price="770">
+                    <div class="input-group">
+                      <span class="input-group-addon buy-form-ticket-minus"><i class="fa fa-minus"></i></span>
+                      <input type="text" name="tickets[ticket_1_adult][c]" value="1" class="form-control text-center buy-form-ticket" data-ticket-price="770" data-ticket-type="adult" style="z-index: 0;">
+                      <span class="input-group-addon buy-form-ticket-plus"><i class="fa fa-plus"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-7">
+                    <label class="h5">
+                      <span class="text-primary">
+                        Льготный, 
+                        <span class="buy-form-ticket-price" data-ticket-price="680">680</span> <i class="fa fa-rub"></i>
+                      </span>
+                      <button type="button" class="btn-link" title="" data-toggle="popover" data-content="Школьники, пенсионеры, инвалиды. Необходимо предъявить подтверждающие документы в кассе." data-placement="top" data-original-title="Льготный билет">
+                        <i class="fa fa-question-circle"></i>
+                      </button>
+                    </label>
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="hidden" name="tickets[ticket_1_discount][price]" value="680" class="form-control text-center buy-form-ticket-input" data-ticket-price="680">
+                    <div class="input-group">
+                      <span class="input-group-addon buy-form-ticket-minus"><i class="fa fa-minus"></i></span>
+                      <input type="text" name="tickets[ticket_1_discount][c]" value="0" class="form-control text-center buy-form-ticket" data-ticket-price="680" data-ticket-type="discount" style="z-index: 0;">
+                      <span class="input-group-addon buy-form-ticket-plus"><i class="fa fa-plus"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-7">
+                    <label class="h5">
+                      <span class="text-primary">
+                        Детский, 
+                        <span class="buy-form-ticket-price" data-ticket-price="400">400</span> <i class="fa fa-rub"></i>
+                      </span>
+                      <button type="button" class="btn-link" title="" data-toggle="popover" data-content="Дети 3-12 лет. До 3 - бесплатно без представления отдельного места. Необходимо предъявить подтверждающие документы в кассе." data-placement="top" data-original-title="Детский билет">
+                        <i class="fa fa-question-circle"></i>
+                      </button>
+                    </label>
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="hidden" name="tickets[ticket_1_child][price]" value="400" class="form-control text-center buy-form-ticket-input" data-ticket-price="400">
+                    <div class="input-group">
+                      <span class="input-group-addon buy-form-ticket-minus"><i class="fa fa-minus"></i></span>
+                      <input type="text" name="tickets[ticket_1_child][c]" value="0" class="form-control text-center buy-form-ticket" data-ticket-price="400" data-ticket-type="child" style="z-index: 0;">
+                      <span class="input-group-addon buy-form-ticket-plus"><i class="fa fa-plus"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="col-sm-6">
+              <form class="order__form" method="get" id="order">
+                <div class="form-group">
+                  <label for="order_fullname">Фамилия и имя</label>
+                  <input id="order_fullname" type="text" name="fullname" class="form-control" maxlength="255" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Номер мобильного телефона</label>
+                  <input id="phone" type="tel"
+                         placeholder="В формате +7 9XX XXX-XX-XX" name="phone" class="form-control" required
+                         maxlength="16">
+                </div>
+                <div class="form-group">
+                  <label for="order_email">E-mail</label>
+                  <input id="order_email" type="email" name="cps_email" class="form-control" required maxlength="100">
+                  <div class="help-block">Пожалуйста, убедитесь в правильности введенных данных — после успешной оплаты билет будет выслан на указанный email, а на телефон мы отправим SMS с номером посадочного билета</div>
+                </div>
+                <div class="form-group">
+                  <label>Вариант оплаты</label>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="paymentType" value="AC" checked="">
+                      <i class="fa fa-credit-card"></i> <b>Банковской картой</b>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="paymentType" value="PC">
+                      <i class="fa fa-yahoo"></i> Из кошелька в <b>Яндекс.Деньгах</b>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="paymentType" value="GP">
+                      <i class="fa fa-money"></i> <b>Наличными</b> через Сбербанк, Связной и&nbsp;терминалы
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group text-center">
+                  <button type="submit" class="btn btn-warning btn-lg btn_buy" id="BuyFormSubmit">Перейти к оплате: 640 <i class="fa fa-rub"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <!-- [[*basket__advice:notempty=` -->
+                <div class="panel panel-success">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Совет от организатора</h3>
+                  </div>
+                  <div class="panel-body">
+                    [[*basket__advice]]
+                  </div>
+                </div>
+              <!-- `]] -->
+            </div>
+            <div class="col-sm-6">
+              <div class="well">
+                <p>Наш сайт использует защищенное соединение согласно рекомендациям международных платёжных систем.</p>
+                <i class="fa fa-2x text-s fa-expeditedssl" title="Secure SSL"></i> <i class="fa fa-2x text-s fa-cc-mastercard" title="MasterCard"></i> <i class="fa fa-2x text-s fa-cc-visa" title="Visa"></i>
+              </div>
+            </div>
+          </div>
+          <p>Оплата билетов осуществляется через сервис Яндекс.Касса. Это современный и абсолютно безопасный метод.</p>
+          <p>Вы можете осуществить покупку без комиссии любым удобным вам способом внесения платежа. Обратите внимание, что при оплате через терминалы пользуйтесь Связным или Евросетью. Платеж через банкомат Сбербанка может занимать до 5 часов.</p>
+          <p>После оплаты нажмите "Вернуться в магазин". Вы будете перенаправлены на страницу с вашим номером билета. Пожалуйста, запишите его. Ваш электронный билет будет отправлен вам на электронную почту, которую вы укажете на данной странице. По этому билету вы сможете осуществить посадку на теплоход.</p>
+          <p>Осуществление оплаты означает Ваше согласие с правилами покупки билета.</p>
+          <p>Если у вас возникли вопросы по покупке билета, пожалуйста, позвоните в нашу круглосуточную службу поддержки и мы обязательно поможем Вам.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- @include ./components/footer.html -->
+
+    <!-- build:js scripts/vendor.js -->
+      <!-- @include ./components/_scripts/vendor.html -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/plugins.js -->
+      <!-- @include ./components/_scripts/plugins.html -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <!-- <script src="scripts/form.js"></script> -->
+      <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- @include ./components/counters/Yandex.Metrika.html -->
+    <!-- @include ./components/counters/Google.Analytics.html -->
+    <!-- @include ./components/counters/Mail.Counter.html -->
+  </body>
+  </html>

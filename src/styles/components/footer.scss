@@ -1,0 +1,30 @@
+.footer {
+  border-top: 1px solid $gray-lighter;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.footer__contacts {
+  padding-top: ($footer-padding * 2) 0;
+  padding-bottom: ($footer-padding * 2) 0;
+  margin-top: 20px;
+  font-size: 23px;
+  text-align: center;
+}
+
+.footer__disclaimer {
+  font-size: .85em;
+  border-top: 1px solid $gray-lighter;
+  padding: ($footer-padding * 2) 0;
+  margin-top: 20px;
+}
+
+.footer__link {
+  color: #fff;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
